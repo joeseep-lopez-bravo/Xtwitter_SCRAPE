@@ -1,0 +1,8 @@
+credentials.conf
+__pycache__/
+imagenes_descargadas/
+# Ignorar archivos de imagenes individuales si no quieres ignorar toda la carpeta
+imagenes_descargadas/*.jpg
+videos_descargados/
+videos_descargados/*.mp4
+ultimo_id.txt

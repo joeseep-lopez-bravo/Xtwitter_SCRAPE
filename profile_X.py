@@ -25,9 +25,10 @@ class Scraper_Perfil_X:
         self.driver.maximize_window()
         self.config = configparser.ConfigParser()
         self.config.read('credentials.conf')
-        self.email = self.config.get('DEFAULT','emailkey')
-        self.username = self.config.get('DEFAULT','usernamekey')
-        self.password = self.config.get('DEFAULT','passwordkey')
+        self.credentials = self._get_credentials()
+        #self.email = self.config.get('DEFAULT','emailkey')
+        #self.username = self.config.get('DEFAULT','usernamekey')
+        #self.password = self.config.get('DEFAULT','passwordkey')
         self.perfil_links = [
             "https://x.com/realDonaldTrump",
            # 'https://x.com/WH40kbestof',
@@ -35,30 +36,75 @@ class Scraper_Perfil_X:
         ]
         self.conexion = DatabaseConnection()
         self.conexion.crear_conexion()  
-    def login(self):
-        time.sleep(3)
-        target_url = 'https://x.com/i/flow/login'
-        self.driver.get(target_url) 
-        time.sleep(4)
-        email_input = self.driver.find_element("css selector","input[name='text']")
-        email_input.send_keys(self.email)
-        btton_to_pssword=self.driver.find_element("css selector","button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-ywje51.r-184id4b.r-13qz1uu.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l")
-        btton_to_pssword.click()
-        time.sleep(4)
-        try:
-            username_input = self.driver.find_element("css selector","input[name='text']")
-            username_input.send_keys(self.username)
-            btton_to_username=self.driver.find_element("css selector","button[data-testid='ocfEnterTextNextButton']")
-            btton_to_username.click()
-            time.sleep(4)
-        except:
-            pass
-        password_input = self.driver.find_element("css selector", "input[name='password']")
-        password_input.send_keys(self.password)
-        login = self.driver.find_element("css selector", "button[data-testid='LoginForm_Login_Button']").click()
-        time.sleep(6)  
+    def configurar_logger(self):
+        # Configuración básica del logger
+        logging.basicConfig(filename='errores_busqueda_Twitter.log',  # Archivo donde se guardarán los logs
+                            level=logging.INFO,     # Nivel de registro, en este caso errores
+                            format='%(asctime)s - %(levelname)s - %(message)s',  # Formato del log
+                            datefmt='%Y-%m-%d %H:%M:%S')  # Formato de la fecha y hora
+    
+    def _get_credentials(self):
+        credentials = []
+        # Filtrar las claves que contienen pares coincidentes de username y password
+        for key in self.config['DEFAULT']:
+            if key.startswith('usernamekey'):
+                num = key.replace('usernamekey', '')
+                email = self.config.get('DEFAULT', f'emailkey{num}')
+                username = self.config.get('DEFAULT', f'usernamekey{num}')
+                password = self.config.get('DEFAULT', f'passwordkey{num}')
+                credentials.append((email,username, password))
+        return credentials
+    def login(self,attempt = 0):
+        max_attempts = len(self.credentials)
+        while attempt < max_attempts and self.credentials:
+                email,username, password = random.choice(self.credentials)
+                logging.info(f"Iniciando sesión con el usuario: {username} (Intento {attempt + 1})")
+                try:    
+                    time.sleep(1)
+                    target_url = 'https://x.com/i/flow/login'
+                    self.driver.get(target_url) 
+                    time.sleep(2)
+                    email_input = self.driver.find_element("css selector","input[name='text']")
+                    email_input.send_keys(email)
+                    btton_to_pssword=self.driver.find_element("css selector","button.css-175oi2r.r-sdzlij.r-1phboty.r-rs99b7.r-lrvibr.r-ywje51.r-184id4b.r-13qz1uu.r-2yi16.r-1qi8awa.r-3pj75a.r-1loqt21.r-o7ynqc.r-6416eg.r-1ny4l3l")
+                    btton_to_pssword.click()
+                    time.sleep(2)
+                    try:
+                        username_input = self.driver.find_element("css selector","input[name='text']")
+                        username_input.send_keys(username)
+                        btton_to_username=self.driver.find_element("css selector","button[data-testid='ocfEnterTextNextButton']")
+                        btton_to_username.click()
+                        time.sleep(2)
+                    except:
+                        #print("No borrar el catch vacio , no hay nada pero si lo borras no funcionara bien ")
+                        pass
+                    
+                    password_input = self.driver.find_element("css selector", "input[name='password']")
+                    password_input.send_keys(password)
+                    login = self.driver.find_element("css selector", "button[data-testid='LoginForm_Login_Button']").click()
+                    time.sleep(3)  
+                    if "login_attempt" in self.driver.current_url or "checkpoint" in self.driver.current_url:
+                        raise ValueError("Inicio de sesión fallido, el perfil puede estar bloqueado o las credenciales son incorrectas.")
+                    else:
+                        logging.info(f"Sesión iniciada con éxito con el usuario: {username}")
+                        return self.driver.page_source 
+                except Exception as e:
+                    logging.error(f"Error en el intento {attempt + 1}: {e}")
+                
+                    self.credentials.remove((email, username, password))  # Eliminar credenciales fallidas
+                    self.driver.get("https://x.com/i/flow/login")  # Volver a la página de inicio de sesión
+                    time.sleep(2)
+                    
+        # Llamar recursivamente para un nuevo intento
+        return self.login(attempt + 1)
+    def configurar_logger(self):
+        # Configuración básica del logger
+        logging.basicConfig(filename='errores_perfiles_fb.log',  # Archivo donde se guardarán los logs
+                            level=logging.INFO,     # Nivel de registro, en este caso errores
+                            format='%(asctime)s - %(levelname)s - %(message)s',  # Formato del log
+                            datefmt='%Y-%m-%d %H:%M:%S')  # Formato de la fecha y hora
     def scroll_hasta_el_final(self,driver):
-        scroll_distance = random.randint(1300, 1800)  # Randomize scroll distance
+        scroll_distance = random.randint(1300, 2000)  # Randomize scroll distance
         current_scroll_position = driver.execute_script("return window.pageYOffset;")
         target_scroll_position = current_scroll_position + scroll_distance
         driver.execute_script(f"window.scrollTo(0, {target_scroll_position});")
@@ -68,9 +114,9 @@ class Scraper_Perfil_X:
             feed_div = driver.find_element(By.CSS_SELECTOR, "section[role='region']:nth-of-type(1)")
             return feed_div.find_elements(By.CSS_SELECTOR, "div[data-testid='cellInnerDiv']")
         except NoSuchElementException as e:
-            print("Error: Could not locate the 'feed_div' or 'cellInnerDiv' elements.", e)
+            logging.info("Error: Could not locate the 'feed_div' or 'cellInnerDiv' elements.", e)
         except Exception as e:
-            print("Unexpected error in obtener_posts:", e)
+            logging.error("Unexpected error in obtener_posts:", e)
         return []
     def obtener_videos(self,elemento_base):
 
@@ -79,9 +125,9 @@ class Scraper_Perfil_X:
             url_post_video = elemento_base.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-18u37iz.r-1q142lx a").get_attribute('href')
             url_to_downloand= url_post_video
             #print("video enlace : ", url_to_downloand)
-            yield url_to_downloand
+            return url_to_downloand
         except:
-            print("Ocurrio un error al obtener el video")
+            logging.error("Ocurrio un error al obtener el video o este post no contiene videos")
             return None
             pass
     def obtener_imagenes(self,driver,elemento_base):
@@ -103,148 +149,166 @@ class Scraper_Perfil_X:
             )
                 break  # Si lo encuentra, sale del bucle
             except NoSuchElementException:
-                print("No contiene imagenes")
+                logging.info("No contiene imagenes")
 
         if div_content_multiimages:
             # Encuentra los contenedores de imágenes dentro del contenedor encontrado
             div_content_images = div_content_multiimages.find_elements(By.CSS_SELECTOR, "div.css-175oi2r.r-16y2uox.r-1pi2tsx.r-13qz1uu")
-            time.sleep(5)
+            time.sleep(3)
             for div_content_image in div_content_images:
                 try:
                     # Obtén el enlace de la imagen
                     src_link = div_content_image.find_element(By.CSS_SELECTOR, "img[alt='Image']").get_attribute("src")
-                    print("El url de una de las imagenes:", src_link)
+                    logging.info("El url de una de las imagenes:", src_link)
                     yield src_link 
                 except NoSuchElementException:
                     # En caso de que no encuentre la imagen en este contenedor
-                    print("Algo pasa con las imagenes")
+                    logging.info("No contiene imagenes")
                     continue
         else:
-            print("No contiene imagenes")        
+            logging.info("No contiene imagenes")        
     def obtener_comentarios(self,driver,elemento_base,publicacion_id):
-        try:
-            #obtener por hora publicada
-             try:
-                clickeable_post_coment = elemento_base.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-18u37iz.r-1q142lx a")
-                ActionChains(driver).move_to_element(clickeable_post_coment).click().perform()
-             except:
-                print("Erroe n click de enlace a comentarios")
-             event=True
-             comentarios_vistos = set()
-             time.sleep(1)
-            # Obtén la nueva URL actual
-             url_actual = driver.current_url
-             contador_repeticiones = 0 
-             longitud_anterior = -1 
-             while event: 
-            # Llama al siguiente método
+        if(publicacion_id is not None):
+            try:
+                #obtener por hora publicada
                 try:
-                    self.scroll_hasta_el_final(driver)
-                    coments= self.obtener_posts(driver)
-                except Exception as e:
-                    print("error al llamar funciones", e)
-                    print("Nueva URL:", url_actual)
-                longitud_actual = len(coments)
-                if longitud_actual == longitud_anterior:
-                    contador_repeticiones += 1  # Incrementa el contador si es igual
-                else:
-                    contador_repeticiones = 0  # Reinicia el contador si no es igual
-                # Actualiza la longitud anterior con la longitud actual
-                longitud_anterior = longitud_actual
-                # Si la longitud se ha repetido 20 veces, cambia event a False
-                if contador_repeticiones >= 8:
-                    print("La longitud de comentarios se ha repetido 8 veces. Terminando la extracción de comentarios del post actual.")
-                    event = False  # Termina el bucle
-                try:
-                    i=0
-                    for comment in coments:
-                        try:
-                            texto = comment.text
-                            i+=1
-                            if texto not in comentarios_vistos:  # Verifica si el texto ya fue procesado
-                                comentarios_vistos.add(texto) 
-                                print("Estamos en el iterador de comentarios : ", i)
-                                try:
-                                    div_global_info_post = comment.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu")
-                                    div_user_poster = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-zl2h9q span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3 span")
-                                    usuario= div_user_poster.text;
-                                    print("El usuario comentador :", div_user_poster.text)
-                                    time.sleep(1)
+                    clickeable_post_coment = elemento_base.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-18u37iz.r-1q142lx a")
+                    ActionChains(driver).move_to_element(clickeable_post_coment).click().perform()
+                except:
+                    logging.error("Erroe n click de enlace a comentarios ")
+                event=True
+                comentarios_vistos = set()
+                time.sleep(1)
+                # Obtén la nueva URL actual
+                url_actual = driver.current_url
+                contador_repeticiones = 0 
+                longitud_anterior = -1 
+                while event: 
+                # Llama al siguiente método
+                    try:
+                        self.scroll_hasta_el_final(driver)
+                        coments= self.obtener_posts(driver)
+                    except Exception as e:
+                        logging.error("error al llamar funciones en comentarios", e)
+                        logging.info("Nueva URL:", url_actual)
+                    longitud_actual = len(coments)
+                    if longitud_actual == longitud_anterior:
+                        contador_repeticiones += 1  # Incrementa el contador si es igual
+                    else:
+                        contador_repeticiones = 0  # Reinicia el contador si no es igual
+                    # Actualiza la longitud anterior con la longitud actual
+                    longitud_anterior = longitud_actual
+                    # Si la longitud se ha repetido 20 veces, cambia event a False
+                    if contador_repeticiones >= 8:
+                        logging.info("La longitud de comentarios se ha repetido 8 veces. Terminando la extracción de comentarios del post actual.")
+                        event = False  # Termina el bucle
+                    try:
+                        i=0
+                        for comment in coments:
+                            try:
+                                texto = comment.text
+                                i+=1
+                                if texto not in comentarios_vistos:  # Verifica si el texto ya fue procesado
+                                    comentarios_vistos.add(texto) 
+                                    logging.info("Estamos en el iterador de comentarios : ", i)
                                     try:
-                                        div_contenido = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r div[data-testid='tweetText']")
-                                        print("El contenido o descripcion comentario :", div_contenido.text)
-                                        descripcion_comentario = div_contenido.text
-                                        time.sleep(1)
-                                    except:
-                                        print("Este comentario no contiene descripcion")
-                                    try:
-                                        with self.conexion.connection.cursor() as cursor:
-                                                consulta = "INSERT INTO comentario (publicacion_id, usuario,descripcion_comentario) VALUES (%s, %s,%s) RETURNING id"
-                                                cursor.execute(consulta, (publicacion_id,usuario, descripcion_comentario))
-                                                self.conexion.connection.commit()
-                                                comentario_id = cursor.fetchone()[0]
-                                                print(f"Comentario insertada con éxito.")         
-                                    except psycopg2.Error as e:
-                                                logging.error(f"Error en la base de datos con la comentario  " ,e)
-                                    except Exception as e:
-                                                logging.error(f"algo esta mal con la insercion del comentario")
-                                    try:
-                                        time.sleep(1)
-                                        div_img= div_global_info_post.find_element(By.CSS_SELECTOR,"div >div.css-175oi2r.r-1mlwlqe.r-1udh08x.r-417010.r-1p0dtai.r-1d2f490.r-u8s1d.r-zchlnj.r-ipm5af > img[alt='Image']")
-                                        src_link = div_img.get_attribute("src")
-                                        print("El url de la imagen del comentario:", src_link)
-                                    except:
-                                        print("Ese post no contiene una Imagen")
-                                    enlaceimagenes=self.obtener_imagenes(driver,div_global_info_post)
-                                    for enlace in enlaceimagenes:
-                                        #print('url de imagen:', enlace)
+                                        div_global_info_post = comment.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu")
+                                        div_user_poster = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-zl2h9q span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3 span")
+                                        usuario= div_user_poster.text;
+                                        logging.info("El usuario comentador :", div_user_poster.text)
+                                        #time.sleep(1)
+                                        try:
+                                            div_contenido = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r div[data-testid='tweetText']")
+                                            logging.info("El contenido o descripcion comentario :", div_contenido.text)
+                                            descripcion_comentario = div_contenido.text
+                                            #time.sleep(1)
+                                        except:
+                                            logging.error("Este comentario no contiene descripcion")
                                         try:
                                             with self.conexion.connection.cursor() as cursor:
-                                                    consulta = "INSERT INTO imagen (url,publicacion_id,comentario_id) VALUES (%s, %s,%s)"
-                                                    cursor.execute(consulta, (enlace,publicacion_id,comentario_id ))
-                                                    self.conexion.connection.commit() # Asegúrate de confirmar la transacción
-                                                    print(f"Imagen insertada con éxito")
-                                    
+                                                    consulta = "INSERT INTO comentario (publicacion_id, usuario,descripcion_comentario) VALUES (%s, %s,%s) RETURNING id"
+                                                    cursor.execute(consulta, (publicacion_id,usuario, descripcion_comentario))
+                                                    self.conexion.connection.commit()
+                                                    comentario_id = cursor.fetchone()[0]
+                                                    logging.info(f"Comentario insertada con éxito.")         
                                         except psycopg2.Error as e:
-                                                    logging.error(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
+                                                    logging.error(f"Error en la base de datos con la comentario  " ,e)
                                         except Exception as e:
-                                                    logging.error(f"Algo está pasando con esto Imagenes: {e}")
-                                    try:
-                                            selector_video= div_global_info_post.find_element(By.CSS_SELECTOR, "video")
-                                            if selector_video:
-                                                url_actual=self.obtener_videos(div_global_info_post)
-                                                try:
-                                                        with self.conexion.connection.cursor() as cursor:
-                                                            consulta = "INSERT INTO videos (url, publicacion_id,comentario_id) VALUES (%s, %s,%s) "
-                                                            cursor.execute(consulta, (url_actual,publicacion_id,comentario_id))
-                                                            self.conexion.connection.commit() 
-                                                            print("Comentario insertado con éxitos")
-                                                except psycopg2.Error as e:
-                                                                logging.error(f"Error en la base de datos con la tabla videos: {e}")
-                                                except Exception as e:
-                                                                logging.error(f"Algo está pasando conn el video insertado: {e}")
-                                            else:
-                                                print("algo salio mal en video")    
-                                            pass
-                                    except Exception as e:
-                                            #print("Ocurrio un error al obtener descripcions del video", e) 
-                                            pass                            
-                                except:
-                                    print("Error en obtner el div global")
-                                    pass
-                        except Exception as e:
-                            #print("Error dentro del bucle for",e)   
-                            pass     
-                except Exception as e:
-                        print("Error dentro del bucle for",e)    
-             time.sleep(1)
-             exit_post_coment = driver.find_element(By.CSS_SELECTOR,"button[aria-label='Back']")
-             exit_post_coment.click()
-             #print("Se hizo lick al boton para retroceder")
-        except Exception as e:
-            print("Ocurrio error en procesar comentarios" , e)
-            pass
+                                                    logging.error(f"algo esta mal con la insercion del comentario")
+                                        try:
+                                            #time.sleep(1)
+                                            div_img= div_global_info_post.find_element(By.CSS_SELECTOR,"div >div.css-175oi2r.r-1mlwlqe.r-1udh08x.r-417010.r-1p0dtai.r-1d2f490.r-u8s1d.r-zchlnj.r-ipm5af > img[alt='Image']")
+                                            src_link = div_img.get_attribute("src")
+                                            logging.info("El url de la imagen del comentario:", src_link)
+                                            try:
+                                                with self.conexion.connection.cursor() as cursor:
+                                                    consulta = "INSERT INTO imagen (url,publicacion_id,comentario_id) VALUES (%s, %s,%s)"
+                                                    cursor.execute(consulta, (src_link,publicacion_id,comentario_id ))
+                                                    self.conexion.connection.commit() # Asegúrate de confirmar la transacción
+                                                    logging.info(f"Imagen  de comentario insertada con éxito")
+                                        
+                                            except psycopg2.Error as e:
+                                                        logging.error(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
+                                            except Exception as e:
+                                                        logging.error(f"Algo está pasando con esto Imagenes: {e}")
+
+                                        except:
+                                            logging.info("Ese post no contiene una Imagen")
+                                        
+                                        
+                                        enlaceimagenes=self.obtener_imagenes(driver,div_global_info_post)
+                                        for enlace in enlaceimagenes:
+                                            #print('url de imagen:', enlace)
+                                            try:
+                                                with self.conexion.connection.cursor() as cursor:
+                                                        consulta = "INSERT INTO imagen (url,publicacion_id,comentario_id) VALUES (%s, %s,%s)"
+                                                        cursor.execute(consulta, (enlace,publicacion_id,comentario_id ))
+                                                        self.conexion.connection.commit() # Asegúrate de confirmar la transacción
+                                                        logging.info(f"Imagen insertada con éxito")
+                                        
+                                            except psycopg2.Error as e:
+                                                        logging.error(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
+                                            except Exception as e:
+                                                        logging.error(f"Algo está pasando con esto Imagenes: {e}")
+                                        try:
+                                                selector_video= div_global_info_post.find_element(By.CSS_SELECTOR, "video")
+                                                if selector_video:
+                                                    url_actual=self.obtener_videos(div_global_info_post)
+                                                    try:
+                                                            with self.conexion.connection.cursor() as cursor:
+                                                                consulta = "INSERT INTO videos (url, publicacion_id,comentario_id) VALUES (%s, %s,%s) "
+                                                                cursor.execute(consulta, (url_actual,publicacion_id,comentario_id))
+                                                                self.conexion.connection.commit() 
+                                                                logging.info("Comentario insertado con éxitos")
+                                                    except psycopg2.Error as e:
+                                                                    logging.error(f"Error en la base de datos con la tabla videos: {e}")
+                                                    except Exception as e:
+                                                                    logging.error(f"Algo está pasando conn el video insertado: {e}")
+                                                else:
+                                                    logging.info("algo salio mal en video ,el post no contiene un video")    
+                                                pass
+                                        except Exception as e:
+                                                #print("Ocurrio un error al obtener descripcions del video", e) 
+                                                pass                            
+                                    except:
+                                        logging.error("Error en obtner el div global en comentarios,es divisor y no publicacion")
+                                        pass
+                            except Exception as e:
+                                #print("Error dentro del bucle for",e)   
+                                pass     
+                    except Exception as e:
+                            logging.error("Error dentro del bucle for",e)    
+                #time.sleep(1)
+                exit_post_coment = driver.find_element(By.CSS_SELECTOR,"button[aria-label='Back']")
+                exit_post_coment.click()
+                #print("Se hizo lick al boton para retroceder")
+            except Exception as e:
+                logging.error("Ocurrio error en procesar comentarios" , e)
+                pass
+        else:
+             logging.info("Se duplico la publicacion")   
     def extraer_datos(self,driver):
+        self.configurar_logger()
         try:
             elementos_vistos = set()
             event =True  
@@ -256,9 +320,9 @@ class Scraper_Perfil_X:
                         self.scroll_hasta_el_final(driver)
                         divs = self.obtener_posts(driver)  # Obtiene los elementos actuales
                         i =0
-                        time.sleep(2)
+                        time.sleep(1)
                         longitud_actual = len(divs)
-                        print('Cantidad total de divs: ', longitud_actual)
+                        logging.info('Cantidad total de divs: ', longitud_actual)
                         if longitud_actual == longitud_anterior:
                             contador_repeticiones += 1  # Incrementa el contador si es igual
                         else:
@@ -266,8 +330,8 @@ class Scraper_Perfil_X:
                         # Actualiza la longitud anterior con la longitud actual
                         longitud_anterior = longitud_actual
                         # Si la longitud se ha repetido 20 veces, cambia event a False
-                        if contador_repeticiones >= 13:
-                            print("La longitud de divs se ha repetido 13 veces. Terminando la extracción.")
+                        if contador_repeticiones >= 12:
+                            logging.info("La longitud de divs se ha repetido 12 veces. Terminando la extracción.")
                             event = False  # Termina el bucle
                         try:
                             for div in divs:
@@ -275,44 +339,55 @@ class Scraper_Perfil_X:
                                 i+=1
                                 if texto not in elementos_vistos:  # Verifica si el texto ya fue procesado
                                     elementos_vistos.add(texto) 
-                                    print("Estamos en el iterador : ", i)
+                                    logging.info("Estamos en el iterador : ", i)
                                     try:
                                         div_global_info_post = div.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu")
                                         div_user_poster = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-zl2h9q span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3 span")
-                                        print("El usuario :", div_user_poster.text)
+                                        logging.info("El usuario :", div_user_poster.text)
                                         post_usuario = div_user_poster.text
-                                        time.sleep(1)
+                                        #time.sleep(1)
                                         try:
                                             div_contenido = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r div[data-testid='tweetText']")
                                             descripcion_post= div_contenido.text
-                                            print("El contenido o descripcion :", div_contenido.text)
-                                            time.sleep(1)
+                                            logging.info("El contenido o descripcion :", div_contenido.text)
+                                            #time.sleep(1)
                                         except:
-                                            print("Este post no contiene descripcion")
+                                            logging.error("Este post no contiene descripcion")
                                         try:
                                             with self.conexion.connection.cursor() as cursor:
-                                                    consulta = "INSERT INTO publicacion (descripcion, usuario) VALUES (%s, %s) RETURNING id"
-                                                    cursor.execute(consulta, (descripcion_post, post_usuario))
-                                                    self.conexion.connection.commit() # Asegúrate de confirmar la transacción
+                                                consulta_verificacion = "SELECT id FROM publicacion WHERE descripcion = %s AND usuario = %s "
+                                                cursor.execute(consulta_verificacion, (descripcion_post, post_usuario))
+                                                resultado = cursor.fetchone()
+                                                
+                                                # Si no existe, insertar
+                                                if resultado is None:
+                                                    consulta_insercion = "INSERT INTO publicacion (descripcion, usuario) VALUES (%s, %s) RETURNING id"
+                                                    cursor.execute(consulta_insercion, (descripcion_post, post_usuario))
                                                     publicacion_id = cursor.fetchone()[0]
-                                                    self.conexion.connection.commit()  # Asegúrate de confirmar la transacción
-                                                    print(f"Publicación insertada con éxito. ID de la publicación: {publicacion_id}")         
+                                                    self.conexion.connection.commit()
+                                                    logging.info(f"Publicación insertada con éxito. ID de la publicación: {publicacion_id}")
+                                                else:
+                                                    publicacion_id = None
+                                                    logging.info(f"Publicación duplicada detectada. ID existente: {resultado[0]}")        
                                         except psycopg2.Error as e:
                                                     logging.error(f"Error en la base de datos con la publicación  con id : {publicacion_id}  ", e)
                                         except Exception as e:
                                                     logging.error(f"algo esta mal con la insercion de la publicacion con id : {publicacion_id} ")
                                                 
                                         try:
-                                            time.sleep(1)
+                                            #ime.sleep(1)
                                             div_img= div_global_info_post.find_element(By.CSS_SELECTOR,"div >div.css-175oi2r.r-1mlwlqe.r-1udh08x.r-417010.r-1p0dtai.r-1d2f490.r-u8s1d.r-zchlnj.r-ipm5af > img[alt='Image']")
                                             src_link = div_img.get_attribute("src")
-                                            print("El url de la imagen:", src_link)
+                                            logging.info("El url de la imagen:", src_link)
                                             try:
                                                 with self.conexion.connection.cursor() as cursor:
-                                                    consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
-                                                    cursor.execute(consulta, (src_link,publicacion_id ))
-                                                    self.conexion.connection.commit() # Asegúrate de confirmar la transacción
-                                                    print(f"Imagen insertada con éxito")
+                                                    if(publicacion_id == None):
+                                                         logging.info("Imagen dentro de publicacion doble")
+                                                    else:
+                                                        consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
+                                                        cursor.execute(consulta, (src_link,publicacion_id ))
+                                                        self.conexion.connection.commit() # Asegúrate de confirmar la transacción
+                                                        logging.info(f"Imagen insertada con éxito")
                                         
                                             except psycopg2.Error as e:
                                                         logging.error(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
@@ -320,16 +395,20 @@ class Scraper_Perfil_X:
                                                         logging.error(f"Algo está pasando con esto Imagenes: {e}")
 
                                         except:
-                                            print("Ese post no contiene una Imagen")
+                                            logging.info("Ese post no contiene una Imagen")
                                         enlaceimagenes=self.obtener_imagenes(driver,div_global_info_post)
                                         for enlace in enlaceimagenes:
                                             #print('url de imagen:', enlace)
                                             try:
                                                 with self.conexion.connection.cursor() as cursor:
-                                                        consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
-                                                        cursor.execute(consulta, (enlace,publicacion_id ))
-                                                        self.conexion.connection.commit() # Asegúrate de confirmar la transacción
-                                                        print(f"Imagen insertada con éxito")
+                                                        if(publicacion_id == None):
+                                                             logging.info("Imagenes dentro de publicacion doble")
+                                                        else: 
+                                                            logging.info("Imagen dentro de publicacion doble")
+                                                            consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
+                                                            cursor.execute(consulta, (enlace,publicacion_id ))
+                                                            self.conexion.connection.commit() # Asegúrate de confirmar la transacción
+                                                            logging.info(f"Imagen insertada con éxito")
                                         
                                             except psycopg2.Error as e:
                                                         logging.error(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
@@ -338,6 +417,7 @@ class Scraper_Perfil_X:
                                         
                                         try:
                                             selector_video= div_global_info_post.find_element(By.CSS_SELECTOR, "video")
+                                            
                                             if selector_video:
                                                 url_actual=self.obtener_videos(div_global_info_post)
                                                 try:
@@ -345,13 +425,13 @@ class Scraper_Perfil_X:
                                                             consulta = "INSERT INTO videos (url, publicacion_id) VALUES (%s, %s) "
                                                             cursor.execute(consulta, (url_actual,publicacion_id))
                                                             self.conexion.connection.commit() 
-                                                            print("Video insertado con éxitos" , url_actual)
+                                                            logging.info("Video insertado con éxitos" , url_actual)
                                                 except psycopg2.Error as e:
                                                                 logging.error(f"Error en la base de datos con la tabla videos: {e}")
                                                 except Exception as e:
                                                                 logging.error(f"Algo está pasando conn el video insertado: {e}")
                                             else:
-                                                print("algo salio mal en video")    
+                                                logging.info("algo salio mal en video")    
                                             pass
                                         except Exception as e:
                                             #print("Ocurrio un error al obtener descripcions del video", e) 
@@ -361,45 +441,47 @@ class Scraper_Perfil_X:
                                             num_comment_text = num_comment.text
                                             num_comment_value = int(num_comment_text) if num_comment_text.isdigit() else 0
 
-                                            print("Número de comentarios:", num_comment_value)
+                                            logging.info("Número de comentarios:", num_comment_value)
                                             
                                             # Si el número de comentarios es 1 o más, ejecuta el método obtener_comentarios
                                             if num_comment_value >= 1:
                                                 self.obtener_comentarios(driver, div_global_info_post,publicacion_id)
-                                                print("Despues de obtner comentarios", event)
+                                               # print("Despues de obtner comentarios", event)
                                                 
                                             else:
-                                                print("No hay comentarios para procesar.")
+                                                logging.info("No hay comentarios para procesar.")
                                         except Exception as e:
-                                            print("Ocurrió un error:", e)
+                                            logging.error("Ocurrió un error al querer obtener comentarios:", e)
                                            
                                     except Exception as e:
-                                        print("error con e" ,e)
+                                        logging.error("error con div global" ,e)
                                         pass   
                         except Exception as e:
                             #print("Error dentro de extraer datos de for",e) 
                             pass                       
                     except Exception as e:
-                        print("Error dentro del while pero antes del for",e)
+                        #print("Error dentro del while pero antes del for",e)
+                        pass
             except Exception as e:
-                print("Error dentro de extraer datos de while",e)   
+                logging.error("Error dentro de extraer datos de while ene xtraccion genral de datos",e)   
+                pass
         except Exception as e:
-            print("Error dentro de extraer datos  dentro",e)                       
+            logging.error("Error dentro de extraer datos in funcion",e)                       
     def procesar_perfiles(self):
+        
         try:
             self.login()
-
             self.config.read('topics.conf')
             if 'DEFAULT' in self.config and 'topic' in self.config['DEFAULT']:
                 topics_str = self.config.get('DEFAULT', 'topic')
                 self.topics = [topic.strip() for topic in topics_str.strip("[]").replace("'", "").split(",")]
             else:
-                print("La opción 'topic' no se encontró en la sección 'DEFAULT'")
-            print("Temas a buscar:", self.topics)
+                logging.info("La opción 'topic' no se encontró en la sección 'DEFAULT'")
+            logging.info("Temas a buscar:", self.topics)
             
             # Iterar sobre cada tema para realizar la búsqueda
             for topic in self.topics:
-                print(f"Realizando búsqueda de: {topic}")
+                logging.info(f"Realizando búsqueda de: {topic}")
                 time.sleep(1)
                 # Hacer clic en el ícono de búsqueda
                 div_search = WebDriverWait(self.driver, 10).until(
@@ -414,7 +496,7 @@ class Scraper_Perfil_X:
                 search_topic.send_keys(topic)  # Asignar el tema actual al campo de búsqueda
                 search_topic.send_keys(Keys.RETURN)
                 time.sleep(1)
-                print(f"Extrayendo resultados para el tema '{topic}'...")
+                logging.info(f"Extrayendo resultados para el tema '{topic}'...")
                 action = ActionChains(self.driver)
                 action.key_down(Keys.CONTROL)
                 # Simular Ctrl + Scroll hacia atrás (Zoom Out)
@@ -425,9 +507,9 @@ class Scraper_Perfil_X:
                 pyautogui.keyUp('ctrl') 
                 try:
                     for dato in self.extraer_datos(self.driver):
-                        print('next :')
+                        logging.info('next  post:')
                 except Exception as e:
-                    print("Error dentro de extraer datos fuera", e)
+                    logging.info("Error dentro de extraer datos fuera", e)
                 #grupos_procesados += 1 
                 #print(f"Grupos procesados: {grupos_procesados}/{total_grupos}")
 

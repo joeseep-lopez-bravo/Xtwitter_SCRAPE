@@ -26,5 +26,6 @@ CREATE TABLE public.imagen (
 CREATE TABLE public.videos (
     id SERIAL PRIMARY KEY,
     url TEXT,
-    publicacion_id INTEGER REFERENCES public.publicacion(id)
+    publicacion_id INTEGER REFERENCES public.publicacion(id),
+    comentario_id INTEGER REFERENCES public.comentario(id)
 );

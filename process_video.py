@@ -81,15 +81,14 @@ class video_process:
                     time.sleep(3)
                     button_to_get.click()
                     time.sleep(3)
+                    contador = 1
                     contenedor_videos = self.driver.find_element(By.CSS_SELECTOR, "div[id='data-result']")
                     videos=self.driver.find_elements(By.CSS_SELECTOR, "div.tw-video")
                     for video in videos:
-                        pass
-                    
                         WebDriverWait(video, 10).until(
                             EC.presence_of_element_located((By.CSS_SELECTOR, "p:nth-of-type(1) a[onclick='showAd()']"))
                         )
-                        download_link = video.find_element(By.CSS_SELECTOR, "p:nth-of-type(1) a[onclick='showAd()']") # si contiene mp4  que realioz lo que sigue
+                        download_link = video.find_element(By.CSS_SELECTOR, "p:nth-of-type(1) a[onclick='showAd()']")
                         if "mp4" in download_link.text.lower():
                             download_url = download_link.get_attribute("href")
                             time.sleep(2)
@@ -98,22 +97,28 @@ class video_process:
                             # Espera la descarga del archivo y cambia su nombre si es necesario
                             archivo_descargado = await self.esperar_archivo("videos_descargados", 30)
                             if archivo_descargado:
-                                self.cambiar_nombre(archivo_descargado, video_id, publicacion_id)
+                                self.cambiar_nombre(archivo_descargado, video_id, publicacion_id, contador)
+                                contador += 1  # Incrementa el contador para el próximo video
                             else:
                                 logging.error("No se encontró el archivo después del tiempo de espera.")
                             time.sleep(5)
                         else:
                             logging.info("El texto del enlace no contiene 'mp4', no se descargará el archivo.")
-                        #print(f"Procesado el video con URL: {url}")
-                        #print(f"Procesado el nuevo video con URL: {download_url}")
                 else:
-                        logging.error("No se pudo obtener el enlace.")
+                    logging.error("No se pudo obtener el enlace.")
         except Exception as e:
             logging.error(f"Error al procesar los videos: {e}")
-    def cambiar_nombre(self,archivo_descargado,video_id,publicacion_id):
+    def cambiar_nombre(self,archivo_descargado,video_id,publicacion_id,contador=1):
         download_dir = "videos_descargados"
-        nuevo_nombre = f"{video_id}_{publicacion_id}.mp4"
+        nuevo_nombre = f"{video_id}_{publicacion_id}_{contador}.mp4"
         nuevo_archivo = os.path.join(download_dir, nuevo_nombre)
+
+        # Evitar conflictos de nombres
+        while os.path.exists(nuevo_archivo):
+            contador += 1
+            nuevo_nombre = f"{video_id}_{publicacion_id}_{contador}.mp4"
+            nuevo_archivo = os.path.join(download_dir, nuevo_nombre)
+        
         os.rename(os.path.join(download_dir, archivo_descargado), nuevo_archivo)
         print(f"Video descargado y renombrado a: {nuevo_nombre}")
     def cerrar_conexion(self):

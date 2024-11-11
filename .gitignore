@@ -6,3 +6,4 @@ imagenes_descargadas/*.jpg
 videos_descargados/
 videos_descargados/*.mp4
 ultimo_id.txt
+errores_perfiles_fb.log

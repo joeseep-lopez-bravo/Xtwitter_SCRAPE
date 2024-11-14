@@ -29,3 +29,10 @@ CREATE TABLE public.videos (
     publicacion_id INTEGER REFERENCES public.publicacion(id),
     comentario_id INTEGER REFERENCES public.comentario(id)
 );
+
+CREATE TABLE public.retweet (
+    id SERIAL PRIMARY KEY,
+    usuario VARCHAR(255) NOT NULL,
+    publicacion_id INTEGER NOT NULL,
+    FOREIGN KEY (publicacion_id) REFERENCES publicacion(id)
+);

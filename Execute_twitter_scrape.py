@@ -23,8 +23,8 @@ def ejecutar_script3():
 # Función para ejecutar todos los scripts en secuencia
 def ejecutar_todos_los_scripts():
     ejecutar_script1()  # Ejecuta y espera a que termine el script 1
-    ejecutar_script3()  # Ejecuta y espera a que termine el script 3
-    ejecutar_script2()  # Ejecuta y espera a que termine el script 2
+    ejecutar_script2()  # Ejecuta y espera a que termine el script 3
+    ejecutar_script3()  # Ejecuta y espera a que termine el script 2
 
 # Función para cancelar todos los scripts en ejecución
 def cancelar_todos_los_scripts():

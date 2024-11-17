@@ -1,9 +1,14 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 CREATE TABLE public.publicacion (
     id SERIAL PRIMARY KEY,
     usuario VARCHAR(255),
     descripcion TEXT,
-    group_name VARCHAR(255)
+    group_name VARCHAR(255),
+    likes VARCHAR(255),
+    id_unico UUID DEFAULT uuid_generate_v4()
 );
+
 
 -- Tabla 'comentario'
 CREATE TABLE public.comentario (
@@ -36,3 +41,6 @@ CREATE TABLE public.retweet (
     publicacion_id INTEGER NOT NULL,
     FOREIGN KEY (publicacion_id) REFERENCES publicacion(id)
 );
+
+
+

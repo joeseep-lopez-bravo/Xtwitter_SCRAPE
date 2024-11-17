@@ -1,0 +1,1355 @@
+2024-11-15 15:47:09 - INFO - Iniciando procesamiento de perfiles...
+2024-11-15 15:47:09 - INFO - Iniciando sesión con el usuario: BravoJoeseeep (Intento 1)
+2024-11-15 15:48:29 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C9F5B8E]
+	(No symbol) [0x00007FF69C9F5E7C]
+	(No symbol) [0x00007FF69CA3EC27]
+	(No symbol) [0x00007FF69CA1BC1F]
+	(No symbol) [0x00007FF69CA3BA4C]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 15:48:32 - INFO - Iniciando sesión con el usuario: usernamekey_example (Intento 1)
+2024-11-15 15:48:38 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C9F5B8E]
+	(No symbol) [0x00007FF69C9F5E7C]
+	(No symbol) [0x00007FF69CA3EC27]
+	(No symbol) [0x00007FF69CA1BC1F]
+	(No symbol) [0x00007FF69CA3BA4C]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 15:48:40 - INFO - Iniciando sesión con el usuario: AbelardoMa65534 (Intento 1)
+2024-11-15 15:49:51 - INFO - Sesión iniciada con éxito con el usuario: AbelardoMa65534
+2024-11-15 15:49:51 - INFO - Temas a buscar: ['ecuador crimen', '#interbank']
+2024-11-15 15:49:51 - INFO - Realizando búsqueda de: ecuador crimen
+2024-11-15 15:49:55 - INFO - Extrayendo resultados para el tema 'ecuador crimen'...
+2024-11-15 15:49:59 - INFO - Cantidad total de divs: 9
+2024-11-15 15:49:59 - INFO - Estamos en el iterador :  1
+2024-11-15 15:49:59 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 15:49:59 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 15:49:59 - INFO - Publicación insertada con éxito. ID de la publicación: 1
+2024-11-15 15:49:59 - ERROR - Ese post no contiene una Imagen
+2024-11-15 15:49:59 - INFO - No contiene imagenes
+2024-11-15 15:49:59 - INFO - No contiene imagenes
+2024-11-15 15:49:59 - INFO - No contiene imagenes
+2024-11-15 15:49:59 - INFO - El id repetido en video es: None
+2024-11-15 15:49:59 - INFO - Video insertado con éxitos  https://x.com/EcuadorUnodc/status/1857510869116035141
+2024-11-15 15:50:05 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:05 - INFO - retweet insertada con éxito.
+2024-11-15 15:50:05 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:05 - INFO - retweet insertada con éxito.
+2024-11-15 15:50:06 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:06 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:06 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:06 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:08 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:08 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:08 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:08 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:10 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:10 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:10 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:10 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:10 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 15:50:10 - INFO - Número de comentarios: 0
+2024-11-15 15:50:10 - INFO - No hay comentarios para procesar.
+2024-11-15 15:50:13 - INFO - Cantidad total de divs: 9
+2024-11-15 15:50:13 - INFO - Estamos en el iterador :  1
+2024-11-15 15:50:13 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 15:50:13 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 15:50:13 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 15:50:13 - ERROR - Ese post no contiene una Imagen
+2024-11-15 15:50:13 - INFO - No contiene imagenes
+2024-11-15 15:50:13 - INFO - No contiene imagenes
+2024-11-15 15:50:13 - INFO - No contiene imagenes
+2024-11-15 15:50:13 - INFO - El id repetido en video es: (1,)
+2024-11-15 15:50:13 - INFO - No se inserto video repetido
+2024-11-15 15:50:18 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:18 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:18 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:18 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:20 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:20 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:20 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:20 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:21 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:21 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:21 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:21 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:21 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 15:50:21 - INFO - Número de comentarios: 0
+2024-11-15 15:50:21 - INFO - No hay comentarios para procesar.
+2024-11-15 15:50:23 - INFO - Cantidad total de divs: 9
+2024-11-15 15:50:23 - INFO - Estamos en el iterador :  2
+2024-11-15 15:50:23 - INFO - El usuario : Fausto Pretelin Muñoz de Cote
+2024-11-15 15:50:23 - INFO - El usuario : Una charla con Andersson Boscán 
+@AnderssonBoscan
+,  periodista que puso contra las cuerdas al presidente de Ecuador Guillermo Lasso; ahora en el exilio luego de haber recibido amenazas por parte del crímen organizado.
+2024-11-15 15:50:23 - INFO - Publicación insertada con éxito. ID de la publicación: 2
+2024-11-15 15:50:23 - ERROR - Ese post no contiene una Imagen
+2024-11-15 15:50:23 - INFO - No contiene imagenes
+2024-11-15 15:50:23 - INFO - No contiene imagenes
+2024-11-15 15:50:23 - INFO - No contiene imagenes
+2024-11-15 15:50:29 - INFO - El usuario que dio retweet : Mimi
+2024-11-15 15:50:29 - INFO - retweet insertada con éxito.
+2024-11-15 15:50:29 - INFO - El usuario que dio retweet : Andersson Boscán
+2024-11-15 15:50:29 - INFO - retweet insertada con éxito.
+2024-11-15 15:50:30 - INFO - El usuario que dio retweet : Mimi
+2024-11-15 15:50:30 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:30 - INFO - El usuario que dio retweet : Andersson Boscán
+2024-11-15 15:50:30 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:32 - INFO - El usuario que dio retweet : Mimi
+2024-11-15 15:50:32 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:32 - INFO - El usuario que dio retweet : Andersson Boscán
+2024-11-15 15:50:32 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:33 - INFO - El usuario que dio retweet : Mimi
+2024-11-15 15:50:33 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:33 - INFO - El usuario que dio retweet : Andersson Boscán
+2024-11-15 15:50:33 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:33 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 15:50:33 - INFO - Número de comentarios: 0
+2024-11-15 15:50:33 - INFO - No hay comentarios para procesar.
+2024-11-15 15:50:36 - INFO - Cantidad total de divs: 11
+2024-11-15 15:50:36 - INFO - Estamos en el iterador :  1
+2024-11-15 15:50:36 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 15:50:36 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 15:50:36 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 15:50:36 - ERROR - Ese post no contiene una Imagen
+2024-11-15 15:50:36 - INFO - No contiene imagenes
+2024-11-15 15:50:36 - INFO - No contiene imagenes
+2024-11-15 15:50:36 - INFO - No contiene imagenes
+2024-11-15 15:50:36 - INFO - El id repetido en video es: (1,)
+2024-11-15 15:50:36 - INFO - No se inserto video repetido
+2024-11-15 15:50:42 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:42 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:44 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:44 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:44 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 15:50:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:44 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 15:50:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 15:50:44 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 15:50:45 - INFO - Número de comentarios: 0
+2024-11-15 15:50:45 - INFO - No hay comentarios para procesar.
+2024-11-15 15:50:46 - INFO - Cantidad total de divs: 9
+2024-11-15 15:50:46 - INFO - Estamos en el iterador :  1
+2024-11-15 15:50:46 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 15:50:46 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 15:50:46 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 15:50:46 - ERROR - Ese post no contiene una Imagen
+2024-11-15 15:50:46 - INFO - No contiene imagenes
+2024-11-15 15:50:46 - INFO - No contiene imagenes
+2024-11-15 15:50:46 - INFO - No contiene imagenes
+2024-11-15 15:50:46 - INFO - El id repetido en video es: (1,)
+2024-11-15 15:50:46 - INFO - No se inserto video repetido
+2024-11-15 15:50:50 - ERROR - Error en el 3er tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C97FA75]
+	(No symbol) [0x00007FF69CA22C77]
+	(No symbol) [0x00007FF69CA3B351]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 15:50:51 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/97bf08d450d342a2fb9a319676083500
+2024-11-15 16:07:32 - INFO - Iniciando procesamiento de perfiles...
+2024-11-15 16:07:32 - INFO - Iniciando sesión con el usuario: usernamekey_example (Intento 1)
+2024-11-15 16:08:41 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C9F5B8E]
+	(No symbol) [0x00007FF69C9F5E7C]
+	(No symbol) [0x00007FF69CA3EC27]
+	(No symbol) [0x00007FF69CA1BC1F]
+	(No symbol) [0x00007FF69CA3BA4C]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 16:08:43 - INFO - Iniciando sesión con el usuario: AbelardoMa65534 (Intento 1)
+2024-11-15 16:10:23 - INFO - Sesión iniciada con éxito con el usuario: AbelardoMa65534
+2024-11-15 16:10:23 - INFO - Temas a buscar: ['ecuador crimen', '#interbank']
+2024-11-15 16:10:23 - INFO - Realizando búsqueda de: ecuador crimen
+2024-11-15 16:10:26 - INFO - Extrayendo resultados para el tema 'ecuador crimen'...
+2024-11-15 16:10:30 - INFO - Cantidad total de divs: 7
+2024-11-15 16:10:30 - INFO - Estamos en el iterador :  1
+2024-11-15 16:10:30 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:10:30 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:10:30 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:10:31 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:10:31 - INFO - No contiene imagenes
+2024-11-15 16:10:31 - INFO - No contiene imagenes
+2024-11-15 16:10:31 - INFO - No contiene imagenes
+2024-11-15 16:10:31 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:10:31 - INFO - No se inserto video repetido
+2024-11-15 16:10:36 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:36 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:36 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:36 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:37 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:37 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:37 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:37 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:37 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:37 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:37 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:37 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:37 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:10:38 - INFO - Número de comentarios: 0
+2024-11-15 16:10:38 - INFO - No hay comentarios para procesar.
+2024-11-15 16:10:39 - INFO - Cantidad total de divs: 7
+2024-11-15 16:10:39 - INFO - Estamos en el iterador :  1
+2024-11-15 16:10:39 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:10:39 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:10:39 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:10:39 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:10:39 - INFO - No contiene imagenes
+2024-11-15 16:10:39 - INFO - No contiene imagenes
+2024-11-15 16:10:39 - INFO - No contiene imagenes
+2024-11-15 16:10:39 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:10:39 - INFO - No se inserto video repetido
+2024-11-15 16:10:44 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:44 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:45 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:45 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:45 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:45 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:45 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:45 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:45 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:45 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:45 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:10:46 - INFO - Número de comentarios: 0
+2024-11-15 16:10:46 - INFO - No hay comentarios para procesar.
+2024-11-15 16:10:47 - INFO - Cantidad total de divs: 9
+2024-11-15 16:10:47 - INFO - Estamos en el iterador :  1
+2024-11-15 16:10:47 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:10:47 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:10:47 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:10:47 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:10:48 - INFO - No contiene imagenes
+2024-11-15 16:10:48 - INFO - No contiene imagenes
+2024-11-15 16:10:48 - INFO - No contiene imagenes
+2024-11-15 16:10:48 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:10:48 - INFO - No se inserto video repetido
+2024-11-15 16:10:53 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:53 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:54 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:54 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:54 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:54 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:56 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:10:56 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:56 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:10:56 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:10:56 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:10:57 - INFO - Número de comentarios: 0
+2024-11-15 16:10:57 - INFO - No hay comentarios para procesar.
+2024-11-15 16:10:58 - INFO - Cantidad total de divs: 8
+2024-11-15 16:10:58 - INFO - Estamos en el iterador :  1
+2024-11-15 16:10:58 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:10:58 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:10:58 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:10:58 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:10:58 - INFO - No contiene imagenes
+2024-11-15 16:10:58 - INFO - No contiene imagenes
+2024-11-15 16:10:58 - INFO - No contiene imagenes
+2024-11-15 16:10:58 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:10:58 - INFO - No se inserto video repetido
+2024-11-15 16:11:03 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:11:03 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:11:03 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:11:03 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:11:04 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:11:04 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:11:04 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:11:04 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:11:05 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/1aecdd450dfe95cf6351ad6db82faa4a
+2024-11-15 16:16:36 - INFO - Iniciando procesamiento de perfiles...
+2024-11-15 16:16:36 - INFO - Iniciando sesión con el usuario: AbelardoMa65534 (Intento 1)
+2024-11-15 16:19:28 - INFO - Sesión iniciada con éxito con el usuario: AbelardoMa65534
+2024-11-15 16:19:28 - INFO - Temas a buscar: ['ecuador crimen', '#interbank']
+2024-11-15 16:19:28 - INFO - Realizando búsqueda de: ecuador crimen
+2024-11-15 16:19:32 - INFO - Extrayendo resultados para el tema 'ecuador crimen'...
+2024-11-15 16:19:37 - INFO - Cantidad total de divs: 9
+2024-11-15 16:19:37 - INFO - Estamos en el iterador :  1
+2024-11-15 16:19:37 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:19:37 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:19:37 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:19:37 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:19:37 - INFO - No contiene imagenes
+2024-11-15 16:19:37 - INFO - No contiene imagenes
+2024-11-15 16:19:37 - INFO - No contiene imagenes
+2024-11-15 16:19:37 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:19:37 - INFO - No se inserto video repetido
+2024-11-15 16:19:42 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:19:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:42 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:19:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:42 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:19:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:42 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:19:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:44 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:19:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:44 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:19:44 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:44 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:19:44 - INFO - Número de comentarios: 0
+2024-11-15 16:19:44 - INFO - No hay comentarios para procesar.
+2024-11-15 16:19:46 - INFO - Cantidad total de divs: 8
+2024-11-15 16:19:46 - INFO - Estamos en el iterador :  1
+2024-11-15 16:19:46 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:19:46 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:19:46 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:19:46 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:19:46 - INFO - No contiene imagenes
+2024-11-15 16:19:46 - INFO - No contiene imagenes
+2024-11-15 16:19:46 - INFO - No contiene imagenes
+2024-11-15 16:19:46 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:19:46 - INFO - No se inserto video repetido
+2024-11-15 16:19:53 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:19:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:53 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:19:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:53 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:19:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:53 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:19:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:53 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:19:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:53 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:19:53 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:19:53 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:19:54 - INFO - Número de comentarios: 0
+2024-11-15 16:19:54 - INFO - No hay comentarios para procesar.
+2024-11-15 16:19:56 - INFO - Cantidad total de divs: 9
+2024-11-15 16:19:56 - INFO - Estamos en el iterador :  1
+2024-11-15 16:19:56 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:19:56 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:19:56 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:19:56 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:19:56 - INFO - No contiene imagenes
+2024-11-15 16:19:56 - INFO - No contiene imagenes
+2024-11-15 16:19:56 - INFO - No contiene imagenes
+2024-11-15 16:19:56 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:19:56 - INFO - No se inserto video repetido
+2024-11-15 16:20:02 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:02 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:02 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:02 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:03 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:03 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:03 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:03 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:05 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:05 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:05 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:05 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:05 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:20:05 - INFO - Número de comentarios: 0
+2024-11-15 16:20:05 - INFO - No hay comentarios para procesar.
+2024-11-15 16:20:06 - INFO - Cantidad total de divs: 9
+2024-11-15 16:20:06 - INFO - Estamos en el iterador :  1
+2024-11-15 16:20:07 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:20:07 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:20:07 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:20:07 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:20:07 - INFO - No contiene imagenes
+2024-11-15 16:20:07 - INFO - No contiene imagenes
+2024-11-15 16:20:07 - INFO - No contiene imagenes
+2024-11-15 16:20:07 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:20:07 - INFO - No se inserto video repetido
+2024-11-15 16:20:13 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:13 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:13 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:13 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:14 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:14 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:14 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:14 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:14 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:14 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:14 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:14 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:14 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:20:15 - INFO - Número de comentarios: 0
+2024-11-15 16:20:15 - INFO - No hay comentarios para procesar.
+2024-11-15 16:20:16 - INFO - Cantidad total de divs: 8
+2024-11-15 16:20:17 - INFO - Estamos en el iterador :  1
+2024-11-15 16:20:17 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:20:17 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:20:17 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:20:17 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:20:17 - INFO - No contiene imagenes
+2024-11-15 16:20:17 - INFO - No contiene imagenes
+2024-11-15 16:20:17 - INFO - No contiene imagenes
+2024-11-15 16:20:17 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:20:17 - INFO - No se inserto video repetido
+2024-11-15 16:20:22 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:22 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:22 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:22 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:23 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:23 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:23 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:23 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:24 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:24 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:24 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:24 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:24 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:20:25 - INFO - Número de comentarios: 0
+2024-11-15 16:20:25 - INFO - No hay comentarios para procesar.
+2024-11-15 16:20:26 - INFO - Cantidad total de divs: 9
+2024-11-15 16:20:26 - INFO - Estamos en el iterador :  1
+2024-11-15 16:20:26 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:20:26 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:20:26 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:20:27 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:20:27 - INFO - No contiene imagenes
+2024-11-15 16:20:27 - INFO - No contiene imagenes
+2024-11-15 16:20:27 - INFO - No contiene imagenes
+2024-11-15 16:20:27 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:20:27 - INFO - No se inserto video repetido
+2024-11-15 16:20:32 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:32 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:32 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:32 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:34 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:34 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:34 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:34 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:34 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:34 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:35 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:35 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:35 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:20:35 - INFO - Número de comentarios: 0
+2024-11-15 16:20:35 - INFO - No hay comentarios para procesar.
+2024-11-15 16:20:36 - INFO - Cantidad total de divs: 9
+2024-11-15 16:20:36 - INFO - Estamos en el iterador :  1
+2024-11-15 16:20:36 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:20:36 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:20:36 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:20:36 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:20:36 - INFO - No contiene imagenes
+2024-11-15 16:20:36 - INFO - No contiene imagenes
+2024-11-15 16:20:36 - INFO - No contiene imagenes
+2024-11-15 16:20:37 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:20:37 - INFO - No se inserto video repetido
+2024-11-15 16:20:41 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:41 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:41 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:41 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:42 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:42 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:42 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:42 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:42 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:42 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:20:43 - INFO - Número de comentarios: 0
+2024-11-15 16:20:43 - INFO - No hay comentarios para procesar.
+2024-11-15 16:20:44 - INFO - Cantidad total de divs: 9
+2024-11-15 16:20:44 - INFO - Estamos en el iterador :  1
+2024-11-15 16:20:44 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:20:44 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:20:44 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:20:44 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:20:44 - INFO - No contiene imagenes
+2024-11-15 16:20:44 - INFO - No contiene imagenes
+2024-11-15 16:20:44 - INFO - No contiene imagenes
+2024-11-15 16:20:44 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:20:44 - INFO - No se inserto video repetido
+2024-11-15 16:20:49 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:49 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:49 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:49 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:50 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:50 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:50 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:50 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:51 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:51 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:51 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:51 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:51 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:20:51 - INFO - Número de comentarios: 0
+2024-11-15 16:20:51 - INFO - No hay comentarios para procesar.
+2024-11-15 16:20:53 - INFO - Cantidad total de divs: 9
+2024-11-15 16:20:53 - INFO - Estamos en el iterador :  1
+2024-11-15 16:20:53 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:20:53 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:20:53 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:20:53 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:20:53 - INFO - No contiene imagenes
+2024-11-15 16:20:53 - INFO - No contiene imagenes
+2024-11-15 16:20:53 - INFO - No contiene imagenes
+2024-11-15 16:20:53 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:20:53 - INFO - No se inserto video repetido
+2024-11-15 16:20:58 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:58 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:58 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:58 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:59 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:20:59 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:20:59 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:20:59 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:21:00 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 16:21:00 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:21:00 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 16:21:00 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 16:21:00 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 16:21:01 - INFO - Número de comentarios: 0
+2024-11-15 16:21:01 - INFO - No hay comentarios para procesar.
+2024-11-15 16:21:02 - INFO - Cantidad total de divs: 9
+2024-11-15 16:21:02 - INFO - Estamos en el iterador :  1
+2024-11-15 16:21:02 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 16:21:02 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 16:21:02 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 16:21:02 - ERROR - Ese post no contiene una Imagen
+2024-11-15 16:21:02 - INFO - No contiene imagenes
+2024-11-15 16:21:02 - INFO - No contiene imagenes
+2024-11-15 16:21:02 - INFO - No contiene imagenes
+2024-11-15 16:21:02 - INFO - El id repetido en video es: (1,)
+2024-11-15 16:21:02 - INFO - No se inserto video repetido
+2024-11-15 16:21:04 - ERROR - Error en el primer tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C97FA75]
+	(No symbol) [0x00007FF69CA22C77]
+	(No symbol) [0x00007FF69CA3B351]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 16:21:04 - ERROR - Error en el 2do tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C97FA75]
+	(No symbol) [0x00007FF69CA22C77]
+	(No symbol) [0x00007FF69CA3B351]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 16:21:05 - ERROR - Error en el 3er tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF69CE638A5+3004357]
+	(No symbol) [0x00007FF69CAF9970]
+	(No symbol) [0x00007FF69C9A582A]
+	(No symbol) [0x00007FF69C97FA75]
+	(No symbol) [0x00007FF69CA22C77]
+	(No symbol) [0x00007FF69CA3B351]
+	(No symbol) [0x00007FF69CA1B983]
+	(No symbol) [0x00007FF69C9E7628]
+	(No symbol) [0x00007FF69C9E8791]
+	GetHandleVerifier [0x00007FF69CE8A00D+3161901]
+	GetHandleVerifier [0x00007FF69CEDE060+3506048]
+	GetHandleVerifier [0x00007FF69CED400D+3465005]
+	GetHandleVerifier [0x00007FF69CC50EEB+830987]
+	(No symbol) [0x00007FF69CB0467F]
+	(No symbol) [0x00007FF69CB009D4]
+	(No symbol) [0x00007FF69CB00B6D]
+	(No symbol) [0x00007FF69CAF0149]
+	BaseThreadInitThunk [0x00007FF8A5F8DBE7+23]
+	RtlUserThreadStart [0x00007FF8A67FFBEC+44]
+
+2024-11-15 16:21:06 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/c02531e8216503919b4a3e40821e2c1c
+2024-11-15 19:50:20 - INFO - Iniciando procesamiento de perfiles...
+2024-11-15 19:50:20 - INFO - Iniciando sesión con el usuario: AbelardoMa65534 (Intento 1)
+2024-11-15 19:50:34 - INFO - Sesión iniciada con éxito con el usuario: AbelardoMa65534
+2024-11-15 19:50:34 - INFO - Temas a buscar: ['ecuador crimen', '#interbank']
+2024-11-15 19:50:34 - INFO - Realizando búsqueda de: ecuador crimen
+2024-11-15 19:50:38 - INFO - Extrayendo resultados para el tema 'ecuador crimen'...
+2024-11-15 19:50:42 - INFO - Cantidad total de divs: 7
+2024-11-15 19:50:42 - INFO - Estamos en el iterador :  1
+2024-11-15 19:50:42 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 19:50:42 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 19:50:42 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 19:50:42 - ERROR - Ese post no contiene una Imagen
+2024-11-15 19:50:42 - INFO - No contiene imagenes
+2024-11-15 19:50:42 - INFO - No contiene imagenes
+2024-11-15 19:50:42 - INFO - No contiene imagenes
+2024-11-15 19:50:42 - INFO - El id repetido en video es: (1,)
+2024-11-15 19:50:42 - INFO - No se inserto video repetido
+2024-11-15 19:50:47 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:50:47 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:47 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:50:47 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:48 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:50:48 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:48 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:50:48 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:49 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:50:49 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:49 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:50:49 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:49 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 19:50:49 - INFO - Número de comentarios: 0
+2024-11-15 19:50:49 - INFO - No hay comentarios para procesar.
+2024-11-15 19:50:50 - INFO - Cantidad total de divs: 9
+2024-11-15 19:50:50 - INFO - Estamos en el iterador :  1
+2024-11-15 19:50:50 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 19:50:50 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 19:50:50 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 19:50:50 - ERROR - Ese post no contiene una Imagen
+2024-11-15 19:50:50 - INFO - No contiene imagenes
+2024-11-15 19:50:50 - INFO - No contiene imagenes
+2024-11-15 19:50:50 - INFO - No contiene imagenes
+2024-11-15 19:50:50 - INFO - El id repetido en video es: (1,)
+2024-11-15 19:50:50 - INFO - No se inserto video repetido
+2024-11-15 19:50:56 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:50:56 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:56 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:50:56 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:56 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:50:56 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:56 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:50:56 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:58 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:50:58 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:58 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:50:58 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:50:58 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 19:50:58 - INFO - Número de comentarios: 0
+2024-11-15 19:50:58 - INFO - No hay comentarios para procesar.
+2024-11-15 19:51:00 - INFO - Cantidad total de divs: 8
+2024-11-15 19:51:00 - INFO - Estamos en el iterador :  1
+2024-11-15 19:51:00 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 19:51:00 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 19:51:00 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 19:51:00 - ERROR - Ese post no contiene una Imagen
+2024-11-15 19:51:00 - INFO - No contiene imagenes
+2024-11-15 19:51:00 - INFO - No contiene imagenes
+2024-11-15 19:51:00 - INFO - No contiene imagenes
+2024-11-15 19:51:00 - INFO - El id repetido en video es: (1,)
+2024-11-15 19:51:00 - INFO - No se inserto video repetido
+2024-11-15 19:51:05 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:51:05 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:51:05 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:51:05 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:51:07 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:51:07 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:51:07 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:51:07 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:51:08 - INFO - El usuario que dio retweet : Loly Marisol Valladares Tayupanta
+2024-11-15 19:51:08 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:51:08 - INFO - El usuario que dio retweet : Martín Pastor
+2024-11-15 19:51:08 - INFO - retweet ya doble y repetido,no ingestado a la db
+2024-11-15 19:51:08 - INFO - Se reptitio mas de 5 retweet , obviamos los demas retweets
+2024-11-15 19:51:08 - INFO - Número de comentarios: 0
+2024-11-15 19:51:08 - INFO - No hay comentarios para procesar.
+2024-11-15 19:51:10 - INFO - Cantidad total de divs: 9
+2024-11-15 19:51:10 - INFO - Estamos en el iterador :  1
+2024-11-15 19:51:10 - INFO - El usuario : UNODC ECUADOR
+2024-11-15 19:51:10 - INFO - El usuario : La corrupción afecta todos los aspectos de nuestras vidas: el deporte, la educación, la salud y el medio ambiente. 
+
+Fomenta el crimen organizado y dificulta el desarrollo.
+
+Para construir un futuro más justo, debemos poner un #AltoAlCrimenOrganizado.
+2024-11-15 19:51:10 - INFO - Publicación duplicada detectada. ID existente: 1
+2024-11-15 19:51:10 - ERROR - Ese post no contiene una Imagen
+2024-11-15 19:51:10 - INFO - No contiene imagenes
+2024-11-15 19:51:10 - INFO - No contiene imagenes
+2024-11-15 19:51:10 - INFO - No contiene imagenes
+2024-11-15 19:51:10 - INFO - El id repetido en video es: (1,)
+2024-11-15 19:51:10 - INFO - No se inserto video repetido
+2024-11-15 19:51:12 - ERROR - Error en el 2do tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C1FA75]
+	(No symbol) [0x00007FF6F6CC2C77]
+	(No symbol) [0x00007FF6F6CDB351]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:51:13 - ERROR - Error en el 3er tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C1FA75]
+	(No symbol) [0x00007FF6F6CC2C77]
+	(No symbol) [0x00007FF6F6CDB351]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:51:13 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/7b7862b627c4e66e060393776d4016fe
+2024-11-15 19:51:30 - INFO - Iniciando procesamiento de perfiles...
+2024-11-15 19:51:30 - INFO - Iniciando sesión con el usuario: AbelardoMa65534 (Intento 1)
+2024-11-15 19:51:36 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='text']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C95B8E]
+	(No symbol) [0x00007FF6F6C95E7C]
+	(No symbol) [0x00007FF6F6CDEC27]
+	(No symbol) [0x00007FF6F6CBBC1F]
+	(No symbol) [0x00007FF6F6CDBA4C]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:51:38 - INFO - Iniciando sesión con el usuario: BravoJoeseeep (Intento 1)
+2024-11-15 19:51:46 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C95B8E]
+	(No symbol) [0x00007FF6F6C95E7C]
+	(No symbol) [0x00007FF6F6CDEC27]
+	(No symbol) [0x00007FF6F6CBBC1F]
+	(No symbol) [0x00007FF6F6CDBA4C]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:51:49 - INFO - Iniciando sesión con el usuario: usernamekey_example (Intento 1)
+2024-11-15 19:51:55 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C95B8E]
+	(No symbol) [0x00007FF6F6C95E7C]
+	(No symbol) [0x00007FF6F6CDEC27]
+	(No symbol) [0x00007FF6F6CBBC1F]
+	(No symbol) [0x00007FF6F6CDBA4C]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:51:57 - ERROR - Error al procesar grupos: maximum recursion depth exceeded
+2024-11-15 19:52:04 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B2535E510>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/b55d5d1b87659a8b2dd27144485671b6
+2024-11-15 19:52:08 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B2535E2A0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/b55d5d1b87659a8b2dd27144485671b6
+2024-11-15 19:52:12 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025B2535E630>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/b55d5d1b87659a8b2dd27144485671b6
+2024-11-15 19:52:35 - INFO - Iniciando procesamiento de perfiles...
+2024-11-15 19:52:35 - INFO - Iniciando sesión con el usuario: usernamekey_example (Intento 1)
+2024-11-15 19:52:44 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C95B8E]
+	(No symbol) [0x00007FF6F6C95E7C]
+	(No symbol) [0x00007FF6F6CDEC27]
+	(No symbol) [0x00007FF6F6CBBC1F]
+	(No symbol) [0x00007FF6F6CDBA4C]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:52:47 - INFO - Iniciando sesión con el usuario: BravoJoeseeep (Intento 1)
+2024-11-15 19:52:55 - ERROR - Error en el intento 1: Message: no such element: Unable to locate element: {"method":"css selector","selector":"input[name='password']"}
+  (Session info: chrome=130.0.6723.117); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C95B8E]
+	(No symbol) [0x00007FF6F6C95E7C]
+	(No symbol) [0x00007FF6F6CDEC27]
+	(No symbol) [0x00007FF6F6CBBC1F]
+	(No symbol) [0x00007FF6F6CDBA4C]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:52:57 - INFO - Iniciando sesión con el usuario: AbelardoMa65534 (Intento 1)
+2024-11-15 19:53:08 - INFO - Sesión iniciada con éxito con el usuario: AbelardoMa65534
+2024-11-15 19:53:08 - INFO - Temas a buscar: ['interbank']
+2024-11-15 19:53:08 - INFO - Realizando búsqueda de: interbank
+2024-11-15 19:53:11 - INFO - Extrayendo resultados para el tema 'interbank'...
+2024-11-15 19:53:15 - INFO - Cantidad total de divs: 16
+2024-11-15 19:53:15 - INFO - Estamos en el iterador :  1
+2024-11-15 19:53:15 - INFO - El usuario : k
+2024-11-15 19:53:15 - INFO - El usuario : A este punto la app de 
+@interbank
+ se está volviendo inservible… 
+
+No puedo transferir ni hacer nada..
+2024-11-15 19:53:15 - INFO - Publicación insertada con éxito. ID de la publicación: 3
+2024-11-15 19:53:16 - INFO - El url de la imagen: https://pbs.twimg.com/media/GcW5yU4WUAAtK7K?format=jpg&name=small
+2024-11-15 19:53:16 - INFO - Imagen insertada con éxito
+2024-11-15 19:53:16 - INFO - No contiene imagenes
+2024-11-15 19:53:16 - INFO - No contiene imagenes
+2024-11-15 19:53:16 - INFO - No contiene imagenes
+2024-11-15 19:53:24 - INFO - La longitud de retweets se ha repetido 8 veces. Terminando la extracción de comentarios del post actual.
+2024-11-15 19:53:25 - INFO - Número de comentarios: 2
+2024-11-15 19:53:28 - INFO - Estamos en el iterador de comentarios :  1
+2024-11-15 19:53:28 - ERROR - Error en obtner el div global en comentarios,es divisor y no publicacion
+2024-11-15 19:53:28 - INFO - Estamos en el iterador de comentarios :  2
+2024-11-15 19:53:28 - ERROR - Error en obtner el div global en comentarios,es divisor y no publicacion
+2024-11-15 19:53:29 - INFO - Estamos en el iterador de comentarios :  3
+2024-11-15 19:53:29 - INFO - El usuario comentador : Giu•
+2024-11-15 19:53:29 - INFO - El contenido o descripcion comentario : Te ayudaron? Estoy en la misma situación
+2024-11-15 19:53:29 - INFO - Comentario insertada con éxito.
+2024-11-15 19:53:29 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - Estamos en el iterador de comentarios :  5
+2024-11-15 19:53:29 - INFO - El usuario comentador : Interbank
+2024-11-15 19:53:29 - INFO - El contenido o descripcion comentario : @clowneando_
+ Hola, sabemos qué realizar tus operaciones de forma rápida, es muy importante para ti  Por favor escríbenos a nuestro perfil oficial de Facebook vía inbox y compártenos tu DNI para revisar lo sucedido lo antes posible. ¡Esperamos tu mensaje!
+2024-11-15 19:53:29 - INFO - Comentario insertada con éxito.
+2024-11-15 19:53:29 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - Estamos en el iterador de comentarios :  7
+2024-11-15 19:53:29 - ERROR - Error en obtner el div global en comentarios,es divisor y no publicacion
+2024-11-15 19:53:29 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:29 - INFO - El usuario comentador : k
+2024-11-15 19:53:29 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:29 - INFO - Comentario insertada con éxito.
+2024-11-15 19:53:29 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - No contiene imagenes
+2024-11-15 19:53:29 - INFO - Comentario video insertado con éxitos
+2024-11-15 19:53:30 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:30 - INFO - El usuario comentador : k
+2024-11-15 19:53:30 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:30 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:30 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:30 - INFO - No contiene imagenes
+2024-11-15 19:53:30 - INFO - No contiene imagenes
+2024-11-15 19:53:30 - INFO - No contiene imagenes
+2024-11-15 19:53:30 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:30 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:31 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:31 - INFO - El usuario comentador : k
+2024-11-15 19:53:31 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:31 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:31 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:31 - INFO - No contiene imagenes
+2024-11-15 19:53:31 - INFO - No contiene imagenes
+2024-11-15 19:53:31 - INFO - No contiene imagenes
+2024-11-15 19:53:31 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:31 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:33 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:33 - INFO - El usuario comentador : k
+2024-11-15 19:53:33 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:33 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:33 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:33 - INFO - No contiene imagenes
+2024-11-15 19:53:33 - INFO - No contiene imagenes
+2024-11-15 19:53:33 - INFO - No contiene imagenes
+2024-11-15 19:53:33 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:33 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:33 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:33 - INFO - El usuario comentador : k
+2024-11-15 19:53:33 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:33 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:33 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:33 - INFO - No contiene imagenes
+2024-11-15 19:53:33 - INFO - No contiene imagenes
+2024-11-15 19:53:33 - INFO - No contiene imagenes
+2024-11-15 19:53:33 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:33 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:34 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:34 - INFO - El usuario comentador : k
+2024-11-15 19:53:34 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:34 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:34 - INFO - Se reptitio mas de 5 comentarios , obviamos los demas comentarios
+2024-11-15 19:53:34 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:34 - INFO - No contiene imagenes
+2024-11-15 19:53:34 - INFO - No contiene imagenes
+2024-11-15 19:53:34 - INFO - No contiene imagenes
+2024-11-15 19:53:34 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:34 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:35 - INFO - Cantidad total de divs: 8
+2024-11-15 19:53:35 - INFO - Estamos en el iterador :  1
+2024-11-15 19:53:35 - INFO - El usuario : k
+2024-11-15 19:53:35 - INFO - El usuario : A este punto la app de 
+@interbank
+ se está volviendo inservible… 
+
+No puedo transferir ni hacer nada..
+2024-11-15 19:53:35 - INFO - Publicación duplicada detectada. ID existente: 3
+2024-11-15 19:53:35 - INFO - El url de la imagen: https://pbs.twimg.com/media/GcW5yU4WUAAtK7K?format=jpg&name=small
+2024-11-15 19:53:35 - INFO - Publicación duplicada detectada. ID existente: 3
+2024-11-15 19:53:35 - INFO - No contiene imagenes
+2024-11-15 19:53:35 - INFO - No contiene imagenes
+2024-11-15 19:53:35 - INFO - No contiene imagenes
+2024-11-15 19:53:43 - INFO - La longitud de retweets se ha repetido 8 veces. Terminando la extracción de comentarios del post actual.
+2024-11-15 19:53:44 - INFO - Número de comentarios: 2
+2024-11-15 19:53:46 - INFO - Estamos en el iterador de comentarios :  1
+2024-11-15 19:53:46 - ERROR - Error en obtner el div global en comentarios,es divisor y no publicacion
+2024-11-15 19:53:46 - INFO - Estamos en el iterador de comentarios :  2
+2024-11-15 19:53:46 - ERROR - Error en obtner el div global en comentarios,es divisor y no publicacion
+2024-11-15 19:53:47 - INFO - Estamos en el iterador de comentarios :  3
+2024-11-15 19:53:47 - INFO - El usuario comentador : Giu•
+2024-11-15 19:53:47 - INFO - El contenido o descripcion comentario : Te ayudaron? Estoy en la misma situación
+2024-11-15 19:53:47 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:47 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:47 - INFO - No contiene imagenes
+2024-11-15 19:53:47 - INFO - No contiene imagenes
+2024-11-15 19:53:47 - INFO - No contiene imagenes
+2024-11-15 19:53:47 - INFO - Estamos en el iterador de comentarios :  5
+2024-11-15 19:53:48 - INFO - El usuario comentador : Interbank
+2024-11-15 19:53:48 - INFO - El contenido o descripcion comentario : @clowneando_
+ Hola, sabemos qué realizar tus operaciones de forma rápida, es muy importante para ti  Por favor escríbenos a nuestro perfil oficial de Facebook vía inbox y compártenos tu DNI para revisar lo sucedido lo antes posible. ¡Esperamos tu mensaje!
+2024-11-15 19:53:48 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:48 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:48 - INFO - No contiene imagenes
+2024-11-15 19:53:48 - INFO - No contiene imagenes
+2024-11-15 19:53:48 - INFO - No contiene imagenes
+2024-11-15 19:53:48 - INFO - Estamos en el iterador de comentarios :  7
+2024-11-15 19:53:48 - ERROR - Error en obtner el div global en comentarios,es divisor y no publicacion
+2024-11-15 19:53:48 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:48 - INFO - El usuario comentador : k
+2024-11-15 19:53:48 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:48 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:48 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:48 - INFO - No contiene imagenes
+2024-11-15 19:53:48 - INFO - No contiene imagenes
+2024-11-15 19:53:48 - INFO - No contiene imagenes
+2024-11-15 19:53:48 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:48 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:48 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:48 - INFO - El usuario comentador : k
+2024-11-15 19:53:48 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:49 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:49 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:49 - INFO - No contiene imagenes
+2024-11-15 19:53:49 - INFO - No contiene imagenes
+2024-11-15 19:53:49 - INFO - No contiene imagenes
+2024-11-15 19:53:49 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:49 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:50 - INFO - Estamos en el iterador de comentarios :  8
+2024-11-15 19:53:50 - INFO - El usuario comentador : k
+2024-11-15 19:53:50 - INFO - El contenido o descripcion comentario : I’m sat 
+
+Can’t wait to uncover more lore of Robbie fucking Williams
+2024-11-15 19:53:50 - INFO - comentario ya doble y repetido,no ingestado a la db
+2024-11-15 19:53:50 - INFO - Se reptitio mas de 5 comentarios , obviamos los demas comentarios
+2024-11-15 19:53:50 - INFO - Ese post no contiene una Imagen
+2024-11-15 19:53:50 - INFO - No contiene imagenes
+2024-11-15 19:53:50 - INFO - No contiene imagenes
+2024-11-15 19:53:50 - INFO - No contiene imagenes
+2024-11-15 19:53:50 - INFO - El id repetido en videos es: (2,)
+2024-11-15 19:53:50 - INFO - NO SE INSERTO VIDEO ELEMENTO REPETIDO
+2024-11-15 19:53:52 - INFO - Cantidad total de divs: 16
+2024-11-15 19:53:52 - INFO - Estamos en el iterador :  1
+2024-11-15 19:53:52 - INFO - El usuario : k
+2024-11-15 19:53:52 - INFO - El usuario : A este punto la app de 
+@interbank
+ se está volviendo inservible… 
+
+No puedo transferir ni hacer nada..
+2024-11-15 19:53:52 - INFO - Publicación duplicada detectada. ID existente: 3
+2024-11-15 19:53:52 - INFO - El url de la imagen: https://pbs.twimg.com/media/GcW5yU4WUAAtK7K?format=jpg&name=small
+2024-11-15 19:53:52 - INFO - Publicación duplicada detectada. ID existente: 3
+2024-11-15 19:53:52 - INFO - No contiene imagenes
+2024-11-15 19:53:52 - INFO - No contiene imagenes
+2024-11-15 19:53:52 - INFO - No contiene imagenes
+2024-11-15 19:53:54 - ERROR - Error en el primer tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C1FA75]
+	(No symbol) [0x00007FF6F6CC2C77]
+	(No symbol) [0x00007FF6F6CDB351]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:53:54 - ERROR - Error en el 2do tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C1FA75]
+	(No symbol) [0x00007FF6F6CC2C77]
+	(No symbol) [0x00007FF6F6CDB351]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:53:55 - ERROR - Error en el 3er tweet:  Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=130.0.6723.117)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6F71038A5+3004357]
+	(No symbol) [0x00007FF6F6D99970]
+	(No symbol) [0x00007FF6F6C4582A]
+	(No symbol) [0x00007FF6F6C1FA75]
+	(No symbol) [0x00007FF6F6CC2C77]
+	(No symbol) [0x00007FF6F6CDB351]
+	(No symbol) [0x00007FF6F6CBB983]
+	(No symbol) [0x00007FF6F6C87628]
+	(No symbol) [0x00007FF6F6C88791]
+	GetHandleVerifier [0x00007FF6F712A00D+3161901]
+	GetHandleVerifier [0x00007FF6F717E060+3506048]
+	GetHandleVerifier [0x00007FF6F717400D+3465005]
+	GetHandleVerifier [0x00007FF6F6EF0EEB+830987]
+	(No symbol) [0x00007FF6F6DA467F]
+	(No symbol) [0x00007FF6F6DA09D4]
+	(No symbol) [0x00007FF6F6DA0B6D]
+	(No symbol) [0x00007FF6F6D90149]
+	BaseThreadInitThunk [0x00007FFCDFA2DBE7+23]
+	RtlUserThreadStart [0x00007FFCE061FBEC+44]
+
+2024-11-15 19:53:55 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/91b10b97b6f354877a1b0cced72877db
+2024-11-15 20:52:41 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DF3364CBF0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/caea89ee6fb15ea8d069ff2e62e1ca4a
+2024-11-15 20:52:45 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DF335E8320>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/caea89ee6fb15ea8d069ff2e62e1ca4a
+2024-11-15 20:53:20 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E93A95CC20>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/22c9ebaf3a9f2c70bd20b412356eaf96
+2024-11-15 20:53:24 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E93A8F8320>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/22c9ebaf3a9f2c70bd20b412356eaf96
+2024-11-15 20:53:28 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E93A95CF80>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/22c9ebaf3a9f2c70bd20b412356eaf96
+2024-11-15 20:55:34 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EC49CE8E60>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/52173fbc9a5f4b0378fc931481e892b0
+2024-11-15 20:55:38 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EC49CE8FB0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/52173fbc9a5f4b0378fc931481e892b0
+2024-11-15 20:55:42 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EC49CE9190>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/52173fbc9a5f4b0378fc931481e892b0
+2024-11-15 21:06:28 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F81F2CCBF0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/3e97e26e0a0d1f6864db3a885698739f
+2024-11-15 21:06:32 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F81F2CCCB0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/3e97e26e0a0d1f6864db3a885698739f
+2024-11-15 21:06:36 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001F81F2CCF80>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/3e97e26e0a0d1f6864db3a885698739f
+2024-11-15 21:07:13 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B6BDA1CC50>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/47c36bc535390cd633fba15fd75fa951
+2024-11-15 21:07:17 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B6BCA07020>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/47c36bc535390cd633fba15fd75fa951
+2024-11-15 21:07:21 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001B6BDA1CF20>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/47c36bc535390cd633fba15fd75fa951
+2024-11-15 21:10:36 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/7380b6976e520f82de393ddecaba84fa
+2024-11-15 21:15:53 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/74919d5aabf100f6a81ddd5565f56326
+2024-11-15 22:02:48 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/09530c7766a928d8f0289c581cdc13a7
+2024-11-15 22:12:52 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/f6a5a1247e854147dfe0463e524886c9
+2024-11-15 22:16:10 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/9b69e6eebb7287b0b8c539d17cef0c1f
+2024-11-15 22:22:05 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/a7587af6fc328ffcb494981ebe9e46a3
+2024-11-15 22:25:48 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/795453591a0df436aae263abb3796f2b
+2024-11-15 22:45:13 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DEDEEAACF0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/bee7d52b6a927b9aa01a153803f87eb3/execute/sync
+2024-11-15 22:45:17 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DEDEDF5910>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/bee7d52b6a927b9aa01a153803f87eb3/execute/sync
+2024-11-15 22:45:23 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DEDEEAA960>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/bee7d52b6a927b9aa01a153803f87eb3
+2024-11-15 22:45:27 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DEDEEAAF90>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/bee7d52b6a927b9aa01a153803f87eb3
+2024-11-15 22:45:31 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001DEDEEAB140>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/bee7d52b6a927b9aa01a153803f87eb3
+2024-11-15 22:53:31 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/b01debabf5da9c5788f7bd4bd2ca0f94
+2024-11-15 23:01:52 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/5dd6d4d6dfe26b571a41464a67d1d937
+2024-11-15 23:03:07 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020539234050>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/6b36d96dcb3666d8cc7862a884e5c229
+2024-11-15 23:08:21 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/e6b5e5d7826da186661e4b24bb297b84
+2024-11-15 23:16:14 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EA6AEB3620>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/9894e82a9dddbe35c202e9b4078d4fb1
+2024-11-15 23:16:18 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EA69F63FE0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/9894e82a9dddbe35c202e9b4078d4fb1
+2024-11-15 23:16:22 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001EA6AEB3F80>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/9894e82a9dddbe35c202e9b4078d4fb1
+2024-11-15 23:20:38 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/c3531d7aceecc530276484262bee8118
+2024-11-16 12:11:24 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/7040798cbf71005de36a15f0a26666e8
+2024-11-16 12:30:26 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/f6d8326a70d5ff2d4f8b489be4da2d86
+2024-11-16 12:39:55 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/10484caa7d232f880dc778da4f7fcc30
+2024-11-16 12:41:50 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025CD9A93920>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/b15349265b3b3537cb8d59b3a5ab620e
+2024-11-16 12:41:54 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025CD8503FE0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/b15349265b3b3537cb8d59b3a5ab620e
+2024-11-16 12:41:58 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000025CD9A93860>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/b15349265b3b3537cb8d59b3a5ab620e
+2024-11-16 13:34:51 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FFBC9A0800>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/8350be467ffcd1bac224db4edb310b00
+2024-11-16 13:34:55 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FFBB433FE0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/8350be467ffcd1bac224db4edb310b00
+2024-11-16 13:34:59 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001FFBC9A0B00>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/8350be467ffcd1bac224db4edb310b00
+2024-11-16 13:38:37 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/26aa02e0e4a9cc59ed907655d97f0749
+2024-11-16 14:38:08 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000259159F20F0>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/237ee7caf4c33be449b84c266d959c6f
+2024-11-16 14:38:12 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000259159C3380>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/237ee7caf4c33be449b84c266d959c6f
+2024-11-16 14:38:16 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000259159F2360>: Failed to establish a new connection: [WinError 10061] No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión')': /session/237ee7caf4c33be449b84c266d959c6f
+2024-11-16 14:40:20 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectionResetError(10054, 'Se ha forzado la interrupción de una conexión existente por el host remoto', None, 10054, None)': /session/f392ffe363dc68b56bd66e853ff10e88

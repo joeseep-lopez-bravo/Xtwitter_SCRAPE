@@ -100,11 +100,19 @@ class Scraper_Perfil_X:
                             format='%(asctime)s - %(levelname)s - %(message)s',  # Formato del log
                             datefmt='%Y-%m-%d %H:%M:%S')  # Formato de la fecha y hora  
     def scroll_hasta_el_final(self,driver):
-        scroll_distance = random.randint(850, 1300)  # Randomize scroll distance
+        scroll_distance = random.randint(950, 1250)  # Randomize scroll distance
         current_scroll_position = driver.execute_script("return window.pageYOffset;")
         target_scroll_position = current_scroll_position + scroll_distance
         driver.execute_script(f"window.scrollTo(0, {target_scroll_position});")
         time.sleep(random.uniform(0, 1.5))  # Randomize delay to mimic human behavior
+
+    def scroll_hasta_el_final_post(self,driver):
+        scroll_distance = random.randint(500, 580)  # Randomize scroll distance
+        #print("La distnacia movida en post fue o es :" , scroll_distance)
+        current_scroll_position = driver.execute_script("return window.pageYOffset;")
+        target_scroll_position = current_scroll_position + scroll_distance
+        driver.execute_script(f"window.scrollTo(0, {target_scroll_position});")
+        time.sleep(random.uniform(0, 1))  # Randomize delay to mimic human behavior    
     def obtener_posts(self,driver):
         try:
             feed_div = driver.find_element(By.CSS_SELECTOR, "section[role='region']:nth-of-type(1)")
@@ -178,8 +186,8 @@ class Scraper_Perfil_X:
                 contador_repeticiones = 0 
                 contador_comentarios_repetidos = 0
                 longitud_anterior = -1 
-                try:
-                        driver.execute_script("window.scrollBy(0, 950);")
+                '''try:
+                        driver.execute_script("window.scrollBy(0, 850);")
                         wait = WebDriverWait(driver, 10)  # Espera hasta 10 segundos como máximo
 
                         # Esperar y hacer clic en el botón para ordenar comentarios
@@ -190,7 +198,7 @@ class Scraper_Perfil_X:
                         button_latest_coments = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "div[role='menuitem']:nth-of-type(3)")))
                         button_latest_coments.click()
                 except Exception as e:
-                        print(f"Ocurrio un erro al realizar click par aordenar los comentarios, {e} ")
+                        print(f"Ocurrio un erro al realizar click par aordenar los comentarios, {e} ")'''
                 
                 while event: 
                 # Llama al siguiente método
@@ -346,32 +354,38 @@ class Scraper_Perfil_X:
                 print(f"Ocurrio error en procesar comentarios {e}")
                 pass
 
-    def obtener_retweets(self,driver,elemento_base,publicacion_id):
+    def obtener_retweets(self,driver,elemento_base,publicacion_id,type_post):
             try:
-                #obtener por hora publicada
-                clickeable_post_coment = elemento_base.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-18u37iz.r-1q142lx a")
-                ActionChains(driver).move_to_element(clickeable_post_coment).click().perform()
-                time.sleep(1)
-                print("hice click para ver dentro del post")
-                try:
-                    button_menu_tweets = WebDriverWait(driver, 10).until(
-                        EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='retweet']"))
-                    )
-                    button_menu_tweets.click()
-                except Exception as e:
-                    print(f"Error en el primer tweet open menu:  {e}")
-                if button_menu_tweets:
+                print("El post es de tipo: ", type_post)
+                if type_post.lower() != "respuesta":
+                    clickeable_post_coment = elemento_base.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-18u37iz.r-1q142lx a")
+                    ActionChains(driver).move_to_element(clickeable_post_coment).click().perform()
+                    time.sleep(1)
+                    print("hice click para ver dentro del post")
                     try:
-                        button_go_to_menu_retweets = WebDriverWait(button_menu_tweets, 10).until(
+                        button_menu_tweets = WebDriverWait(driver, 10).until(
+                            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='retweet']"))
+                        )
+                        # Desplazarse al elemento para garantizar que sea clickeable
+                        ActionChains(driver).move_to_element(button_menu_tweets).perform()
+                        # Intentar hacer clic
+                        button_menu_tweets.click()
+                    except Exception as e:
+                        print(f"Error en el primer tweet open menu:  {e}")
+                    time.sleep(1)
+                    try:
+                        button_go_to_menu_retweets = WebDriverWait(driver, 15).until(
                             EC.element_to_be_clickable((By.CSS_SELECTOR, "a[role='menuitem']:nth-of-type(2)"))
                         )
+
+                        ActionChains(driver).move_to_element(button_go_to_menu_retweets).perform()
+
                         button_go_to_menu_retweets.click()
                     except Exception as e:
                         print(f"Error en el 2do tweet selecto quotes:  {e}")
-
                     # Pausa para asegurarse de que la página cargue
+                    #time.sleep(1)
                     time.sleep(1)
-
                     # Esperar y hacer clic en el botón para ver los retweets
                     try:
                         button_to_see_retweets = WebDriverWait(driver, 10).until(
@@ -380,103 +394,111 @@ class Scraper_Perfil_X:
                         button_to_see_retweets.click()
                     except Exception as e:
                         print(f"Error en el 3er tweet select:  {e}")
-                else:        
-                    # Esperar y hacer clic en el segundo botón del menú de retweets
-                    print("No se encontro retweets")
-                
-                event=True
-                time.sleep(1)
-                # Obtén la nueva URL actual
-                url_actual = driver.current_url
-                contador_repeticiones = 0 
-                contador_retweet_repetidos = 0
-                longitud_anterior = -1 
-                while event: 
-                    try:
-                        self.scroll_hasta_el_final(driver)
-                        tweets= self.obtener_posts(driver)
-                    except Exception as e:
-                        print(f"error al llamar funciones en cretweets {e}")
-                        print(f"Nueva URL: {url_actual}")
-                    longitud_actual = len(tweets)
-                    if longitud_actual == longitud_anterior:
-                        contador_repeticiones += 1  # Incrementa el contador si es igual
-                    else:
-                        contador_repeticiones = 0  # Reinicia el contador si no es igual
-                    # Actualiza la longitud anterior con la longitud actual
-                    longitud_anterior = longitud_actual
-                    # Si la longitud se ha repetido 20 veces, cambia event a False
-                    if contador_repeticiones >= 5:
-                        print("La longitud de retweets se ha repetido 8 veces. Terminando la extracción de comentarios del post actual.")
-                        event = False  # Termina el bucle      
-                    try:
-                        for tweet in tweets:
-                                try:
-                                    div_username = tweet.find_element(By.CSS_SELECTOR, "div>div[dir='ltr'] > span > span:nth-of-type(1)")
-                                    username_retweet = div_username.text
-                                    print(f"El usuario que dio retweet : {username_retweet}")
+                    
+                    
+                    event=True
+                    time.sleep(1)
+                    # Obtén la nueva URL actual
+                    url_actual = driver.current_url
+                    contador_repeticiones = 0 
+                    contador_retweet_repetidos = 0
+                    longitud_anterior = -1 
+                    while event: 
+                        try:
+                            self.scroll_hasta_el_final(driver)
+                            tweets= self.obtener_posts(driver)
+                        except Exception as e:
+                            print(f"error al llamar funciones en cretweets {e}")
+                            print(f"Nueva URL: {url_actual}")
+                        longitud_actual = len(tweets)
+                        if longitud_actual == longitud_anterior:
+                            contador_repeticiones += 1  # Incrementa el contador si es igual
+                        else:
+                            contador_repeticiones = 0  # Reinicia el contador si no es igual
+                        # Actualiza la longitud anterior con la longitud actual
+                        longitud_anterior = longitud_actual
+                        # Si la longitud se ha repetido 20 veces, cambia event a False
+                        if contador_repeticiones >= 5:
+                            print("La longitud de retweets se ha repetido 8 veces. Terminando la extracción de comentarios del post actual.")
+                            event = False  # Termina el bucle      
+                        try:
+                            for tweet in tweets:
                                     try:
+                                        div_username = tweet.find_element(By.CSS_SELECTOR, "div>div[dir='ltr'] > span > span:nth-of-type(1)")
+                                        username_retweet = div_username.text
+                                        print(f"El usuario que dio retweet : {username_retweet}")
+                                        try:
+                                            
+                                            with self.conexion.connection.cursor() as cursor:
+                                                    consulta_verificacion = "SELECT id FROM retweet  WHERE publicacion_id = %s AND usuario = %s "
+                                                    cursor.execute(consulta_verificacion, (publicacion_id,username_retweet ))
+                                                    resultado = cursor.fetchone()
+                                                    if resultado== None:
+                                                        consulta = "INSERT INTO retweet (publicacion_id, usuario) VALUES (%s,%s) "
+                                                        cursor.execute(consulta, (publicacion_id,username_retweet))
+                                                        self.conexion.connection.commit()
+                                                        print(f"retweet insertada con éxito.")   
+                                                    else: 
+                                                        print("retweet ya doble y repetido,no ingestado a la db")
+                                                        contador_retweet_repetidos += 1   
+                                                        if(contador_retweet_repetidos > 5):
+                                                            print("Se reptitio mas de 5 retweet , obviamos los demas retweets")
+                                                            event=False
+                                                            break
+                                        except psycopg2.Error as e:
+                                                    print(f"Error en la base de datos con la comentario  {e}")
+                                        except Exception as e:
+                                                    print(f"algo esta mal con la insercion del comentario")
                                         
-                                        with self.conexion.connection.cursor() as cursor:
-                                                consulta_verificacion = "SELECT id FROM retweet  WHERE publicacion_id = %s AND usuario = %s "
-                                                cursor.execute(consulta_verificacion, (publicacion_id,username_retweet ))
-                                                resultado = cursor.fetchone()
-                                                if resultado== None:
-                                                    consulta = "INSERT INTO retweet (publicacion_id, usuario) VALUES (%s,%s) "
-                                                    cursor.execute(consulta, (publicacion_id,username_retweet))
-                                                    self.conexion.connection.commit()
-                                                    print(f"retweet insertada con éxito.")   
-                                                else: 
-                                                    #print("retweet ya doble y repetido,no ingestado a la db")
-                                                    #contador_retweet_repetidos += 1   
-                                                    #if(contador_retweet_repetidos > 5):
-                                                        #print("Se reptitio mas de 5 retweet , obviamos los demas retweets")
-                                                        #event=False
-                                                        #break
-                                                        pass
-                                    except psycopg2.Error as e:
-                                                print(f"Error en la base de datos con la comentario  {e}")
-                                    except Exception as e:
-                                                print(f"algo esta mal con la insercion del comentario")
-                                    
-                                except:
-                                    print(f"Error dentro del bucle for retwettv{e}")           
-                    except:
-                         print("sucede algo dentro tweets")
-                         pass 
-                try:
-                    exit_post_coment = driver.find_element(By.CSS_SELECTOR,"button[aria-label='Back']")
-                    exit_post_coment.click()
-                    print("Realize click para salir")
-                except Exception as e:
-                     print("No se salio del 1er back")
-                try:    
-                    
-                    exit_post_coment.click()   
-                except Exception as e:
-                     print("No se salio del 2do back")
-                try:
-                    num_comment=driver.find_element(By.CSS_SELECTOR,"div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0:nth-of-type(1) button div[dir='ltr'] div.css-175oi2r.r-xoduu5.r-1udh08x:nth-of-type(2) span span")
-                    num_comment_text = num_comment.text
-                    num_comment_value = int(num_comment_text) if num_comment_text.isdigit() else 0
+                                    except:
+                                        print(f"Error dentro del bucle for retwettv{e}")           
+                        except Exception as e:
+                            #print("sucede algo dentro tweets", e)
+                            pass 
+                    try:
+                        exit_post_coment = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.CSS_SELECTOR, "button[aria-label='Back']"))
+                    )
+                        exit_post_coment.click()
+                        print("Realicé click para salir")
+                    except Exception as e:
+                        print("No se salio del 1er back" ,e)
+                    try:    
+                        exit_post_coment = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.CSS_SELECTOR, "button[aria-label='Back']"))
+                    )
+                        exit_post_coment.click()   
+                    except Exception as e:
+                        print("No se salio del 2do back")
+                    try:
+                        num_comment=driver.find_element(By.CSS_SELECTOR,"div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0:nth-of-type(1) button div[dir='ltr'] div.css-175oi2r.r-xoduu5.r-1udh08x:nth-of-type(2) span span")
+                        num_comment_text = num_comment.text
+                        num_comment_value = int(num_comment_text) if num_comment_text.isdigit() else 0
 
-                    print(f"Número de comentarios: {num_comment_value}")
-                    
-                    # Si el número de comentarios es 1 o más, ejecuta el método obtener_comentarios
-                    if num_comment_value >= 1:
-                        #self.obtener_comentarios(driver,publicacion_id)
-                        # print("Despues de obtner comentarios", event)
-                        pass
-                    else:
-                        print("No hay comentarios para procesar.")
-                except Exception as e:
-                    print(f"Ocurrió un error al querer obtener comentarios: {e}")                
-                try:
-                    exit_post_coment3 = driver.find_element(By.CSS_SELECTOR,"button[aria-label='Back']")
-                    exit_post_coment3.click()
-                    print("le dicick al tercer boton") 
-                except:
-                     print("No se salio del 3er back")
+                        print(f"Número de comentarios: {num_comment_value}")
+                        
+                        # Si el número de comentarios es 1 o más, ejecuta el método obtener_comentarios
+                        if num_comment_value >= 1:
+                            self.obtener_comentarios(driver,publicacion_id)
+                            # print("Despues de obtner comentarios", event)
+                            pass
+                        else:
+                            print("No hay comentarios para procesar.")
+                    except Exception as e:
+                        print(f"Ocurrió un error al querer obtener comentarios: {e}")           
+                    try:
+                        exit_post_coment = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.CSS_SELECTOR, "button[aria-label='Back']"))
+                        )
+                        exit_post_coment.click() 
+                        print("le dicick al tercer boton") 
+                    except:
+                        print("No se salio del 3er back")  
+                else:
+                     print("No se procedio a obtener tweets de publicacion tipo respuesta")
+                     pass
+                #obtener por hora publicada
+                
             except Exception as e:    
                 print(f"Aqui hay errores en obtener_retweets {e}")
                 pass
@@ -489,7 +511,7 @@ class Scraper_Perfil_X:
             try:
                 while event:  # Bucle infinito hasta que se detenga manualmente
                     try:
-                        self.scroll_hasta_el_final(driver)
+                        self.scroll_hasta_el_final_post(driver)
                         divs = self.obtener_posts(driver)  # Obtiene los elementos actuales
                         i =0
                         longitud_actual = len(divs)
@@ -506,151 +528,175 @@ class Scraper_Perfil_X:
                             event = False  # Termina el bucle
                         try:
                             for div in divs:
-                                texto = div.text
+                                #el problema es que cuando encuentra publiaciones que responden a otros se bugea
+                                #print("Este es el texto" ,texto)
                                 i+=1
+                                print(f"Estamos en el iterador :  {i}")
+                                try:
+                                    div_global_info_post = div.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu")
+                                    div_user_poster = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-zl2h9q span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3 span")
+                                    post_usuario = div_user_poster.text
+                                    print(f"El usuario : {post_usuario}")
+                                except: 
+                                    #print("Este post no contiene usuario")   
+                                    pass
+                                try:
+                                    div_contenido = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r div[data-testid='tweetText']")
+                                    descripcion_post= div_contenido.text
+                                    print(f"Descripcion post : {descripcion_post}")
+                                    #time.sleep(1)
+                                except:
+                                    descripcion_post=" "
+                                    print("Este post no contiene descripcion")
+                                time.sleep(1)    
+                                try:
+                                        num_likes=div_global_info_post.find_element(By.CSS_SELECTOR,"div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0:nth-of-type(3) button div[dir='ltr'] div.css-175oi2r.r-xoduu5.r-1udh08x:nth-of-type(2) span span")
+                                        num_likes_text = num_likes.text                 
+                                except Exception as e:    
+                                        num_likes_text = 0    
+                                        print(f"Problema en extraer los likes en tweets  {e}") 
+                                        pass
+                                texto = post_usuario + descripcion_post
+                                #print("El valor de :",texto)
+                                try:
+                                    post_replier = div_global_info_post.find_element(
+                                        By.CSS_SELECTOR, "div.css-175oi2r.r-4qtqp9.r-zl2h9q > div[dir='ltr']"
+                                    )
+                                    post_replier_text = post_replier.text
+                                    if "Replying to" in post_replier_text:
+                                        type_post = "respuesta"
+                                        print("Es post tipo respuesta")
+                                    else:
+                                        type_post = "otro_tipo"
+                                        print("Es algo nuevo y diferente que 'Replying to'")
+                                except Exception as e:  # Captura el caso donde el elemento no existe
+                                        type_post = "post_normal"
+                                        #print("No se encontró el elemento para determinar el tipo de publicación.",e)
+                                        pass
+                                
                                 if texto not in elementos_vistos:  # Verifica si el texto ya fue procesado
-                                    #elementos_vistos.add(texto) 
-                                    print(f"Estamos en el iterador :  {i}")
+                                    elementos_vistos.add(texto)  
+                                
                                     try:
-                                        div_global_info_post = div.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-1iusvr4.r-16y2uox.r-1777fci.r-kzbkwu")
-                                        div_user_poster = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r.r-zl2h9q span.css-1jxf684.r-dnmrzs.r-1udh08x.r-3s2u2q.r-bcqeeo.r-1ttztb7.r-qvutc0.r-poiln3 span")
-                                        
-                                        post_usuario = div_user_poster.text
-                                        print(f"El usuario : {post_usuario}")
-                                        #time.sleep(1)
-                                        try:
-                                            div_contenido = div_global_info_post.find_element(By.CSS_SELECTOR, "div.css-175oi2r div[data-testid='tweetText']")
-                                            descripcion_post= div_contenido.text
-                                            print(f"Descripcion post : {descripcion_post}")
-                                            #time.sleep(1)
-                                        except:
-                                            print("Este post no contiene descripcion")
-                                        try:
-                                                num_likes=div_global_info_post.find_element(By.CSS_SELECTOR,"div.css-175oi2r.r-18u37iz.r-1h0z5md.r-13awgt0:nth-of-type(3) button div[dir='ltr'] div.css-175oi2r.r-xoduu5.r-1udh08x:nth-of-type(2) span span")
-                                                num_likes_text = num_likes.text
+                                        with self.conexion.connection.cursor() as cursor:
+                                            consulta_verificacion = "SELECT id FROM publicacion WHERE descripcion = %s AND usuario = %s "
+                                            cursor.execute(consulta_verificacion, (descripcion_post, post_usuario))
+                                            resultado = cursor.fetchone()
+                                            # Si no existe, insertar
+                                            if resultado is None:
+                                                consulta_insercion = "INSERT INTO publicacion (descripcion, usuario,likes) VALUES (%s, %s,%s) RETURNING id"
+                                                cursor.execute(consulta_insercion, (descripcion_post, post_usuario, num_likes_text ))
+                                                publicacion_id = cursor.fetchone()[0]
+                                                self.conexion.connection.commit()
+                                                print(f"Publicación insertada con éxito. ID de la publicación: {publicacion_id}")
+                                            else:
                                                 
-                                        except Exception as e:    
-                                                num_likes_text = 0    
-                                                print(f"Problema en exraer los likes en tweets  {e}") 
+                                                publicacion_id = resultado[0]
+                                                    # Solo actualizar si el número de likes ha cambiado
+                                                '''try: 
+                                                    consulta_actualizacion = "UPDATE publicacion SET likes = %s WHERE id = %s"
+                                                    cursor.execute(consulta_actualizacion, (num_likes_text, publicacion_id))
+                                                    self.conexion.connection.commit()
+                                                    print(f"Publicación duplicada detectada. ID existente: {publicacion_id}")
+                                                except Exception as e:
+                                                        print(f"Ocurrio un error en el desarrollo de actualizacion de likes y obtencion del id {e}")'''
+                                    except psycopg2.Error as e:
+                                                print(f"Error en la base de datos con la publicación  con id : {publicacion_id}  {e} ")
+                                    except Exception as e:
+                                                print(f"algo esta mal con la insercion de la publicacion con id : {publicacion_id} ")
+                                                                
+                                    try:
+                                        #ime.sleep(1)
+                                        div_img= div_global_info_post.find_element(By.CSS_SELECTOR,"div >div.css-175oi2r.r-1mlwlqe.r-1udh08x.r-417010.r-1p0dtai.r-1d2f490.r-u8s1d.r-zchlnj.r-ipm5af > img[alt='Image']")
+                                        src_link = div_img.get_attribute("src")
+                                        print(f"El url de la imagen: {src_link}")
                                         try:
                                             with self.conexion.connection.cursor() as cursor:
-                                                consulta_verificacion = "SELECT id FROM publicacion WHERE descripcion = %s AND usuario = %s "
-                                                cursor.execute(consulta_verificacion, (descripcion_post, post_usuario))
+                                                consulta_verificacion = "SELECT id FROM imagen WHERE url = %s "
+                                                cursor.execute(consulta_verificacion, (src_link,))
                                                 resultado = cursor.fetchone()
-                                                # Si no existe, insertar
-                                                if resultado is None:
-                                                    consulta_insercion = "INSERT INTO publicacion (descripcion, usuario,likes) VALUES (%s, %s,%s) RETURNING id"
-                                                    cursor.execute(consulta_insercion, (descripcion_post, post_usuario, num_likes_text ))
-                                                    publicacion_id = cursor.fetchone()[0]
-                                                    self.conexion.connection.commit()
-                                                    print(f"Publicación insertada con éxito. ID de la publicación: {publicacion_id}")
-                                                else:
-                                                    try:
-                                                        publicacion_id = resultado[0]
-                                                        # Solo actualizar si el número de likes ha cambiado
-                                                        consulta_actualizacion = "UPDATE publicacion SET likes = %s WHERE id = %s"
-                                                        cursor.execute(consulta_actualizacion, (num_likes_text, publicacion_id))
-                                                        self.conexion.connection.commit()
-                                                        print(f"Publicación duplicada detectada. ID existente: {publicacion_id}")
-                                                    except Exception as e:
-                                                            print(f"Ocurrio un error en el desarrollo de actualizacion de likes y obtencion del id {e}")
+
+                                                if(resultado == None):
+                                                    consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
+                                                    cursor.execute(consulta, (src_link,publicacion_id ))
+                                                    self.conexion.connection.commit() # Asegúrate de confirmar la transacción
+                                                    print(f"Imagen insertada con éxito")
+                                                else:   
+                                                    print(f"Imagen duplicada detectada. ID existente pertenece a publicacion con id : {publicacion_id}")
                                         except psycopg2.Error as e:
-                                                    print(f"Error en la base de datos con la publicación  con id : {publicacion_id}  {e} ")
+                                                    print(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
                                         except Exception as e:
-                                                    print(f"algo esta mal con la insercion de la publicacion con id : {publicacion_id} ")
-                                                                  
+                                                    print(f"Algo está pasando con esto Imagenes: {e}")
+                                    except:
+                                        print("Ese post no contiene una Imagen")
+
+                                    enlaceimagenes=self.obtener_imagenes(driver,div_global_info_post)
+                                    for enlace in enlaceimagenes:
+                                        #print('url de imagen:', enlace)
                                         try:
-                                            #ime.sleep(1)
-                                            div_img= div_global_info_post.find_element(By.CSS_SELECTOR,"div >div.css-175oi2r.r-1mlwlqe.r-1udh08x.r-417010.r-1p0dtai.r-1d2f490.r-u8s1d.r-zchlnj.r-ipm5af > img[alt='Image']")
-                                            src_link = div_img.get_attribute("src")
-                                            print(f"El url de la imagen: {src_link}")
-                                            try:
-                                                with self.conexion.connection.cursor() as cursor:
-                                                    consulta_verificacion = "SELECT id FROM imagen WHERE url = %s "
-                                                    cursor.execute(consulta_verificacion, (src_link,))
-                                                    resultado = cursor.fetchone()
-
-                                                    if(resultado == None):
-                                                        consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
-                                                        cursor.execute(consulta, (src_link,publicacion_id ))
-                                                        self.conexion.connection.commit() # Asegúrate de confirmar la transacción
-                                                        print(f"Imagen insertada con éxito")
-                                                    else:   
-                                                        print(f"Imagen duplicada detectada. ID existente pertenece a publicacion con id : {publicacion_id}")
-                                            except psycopg2.Error as e:
-                                                        print(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
-                                            except Exception as e:
-                                                        print(f"Algo está pasando con esto Imagenes: {e}")
-                                        except:
-                                            print("Ese post no contiene una Imagen")
-
-                                        enlaceimagenes=self.obtener_imagenes(driver,div_global_info_post)
-                                        for enlace in enlaceimagenes:
-                                            #print('url de imagen:', enlace)
-                                            try:
-                                                with self.conexion.connection.cursor() as cursor:
-                                                         consulta_verificacion = "SELECT id FROM imagen WHERE url = %s "
-                                                         cursor.execute(consulta_verificacion, (src_link,))
-                                                         resultado = cursor.fetchone()
-                                                         if (resultado == None):
+                                            with self.conexion.connection.cursor() as cursor:
+                                                        consulta_verificacion = "SELECT id FROM imagen WHERE url = %s "
+                                                        cursor.execute(consulta_verificacion, (src_link,))
+                                                        resultado = cursor.fetchone()
+                                                        if (resultado == None):
                                                             consulta = "INSERT INTO imagen (url,publicacion_id) VALUES (%s, %s)"
                                                             cursor.execute(consulta, (enlace,publicacion_id ))
                                                             self.conexion.connection.commit() # Asegúrate de confirmar la transacción
                                                             print(f"Imagen insertada con éxito")
-                                                         else: 
+                                                        else: 
                                                             print(f"Imagen duplicada detectada. ID existente pertenece a publicacion con id : {publicacion_id}")
-                                        
-                                            except psycopg2.Error as e:
-                                                        print(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
-                                            except Exception as e:
-                                                        print(f"Algo está pasando con esto Imagenes: {e}")
-                                        
-
-                                        try:
-                                            selector_video= div_global_info_post.find_element(By.CSS_SELECTOR, "video")
-                                            
-                                            if selector_video:
-                                                url_actual=self.obtener_videos(div_global_info_post)
-                                                try:
-                                                      with self.conexion.connection.cursor() as cursor:
-                                                            consulta_verificacion = "SELECT id FROM videos WHERE url = %s "
-                                                            cursor.execute(consulta_verificacion, (url_actual,))
-                                                            resultado = cursor.fetchone()
-                                                            print(f"El id repetido en video es: {resultado}")
-                                                            if (resultado==None):
-                                                                consulta = "INSERT INTO videos (url, publicacion_id) VALUES (%s, %s) "
-                                                                cursor.execute(consulta, (url_actual,publicacion_id))
-                                                                self.conexion.connection.commit() 
-                                                                print(f"Video insertado con éxitos  {url_actual}")
-                                                            else:
-                                                                 print("No se inserto video repetido")    
-                                                except psycopg2.Error as e:
-                                                                print(f"Error en la base de datos con la tabla videos: {e}")
-                                                except Exception as e:
-                                                                print(f"Algo está pasando conn el video insertado: {e}")
-                                            else:
-                                                #print("algo salio mal en video")    
-                                                pass
+                                    
+                                        except psycopg2.Error as e:
+                                                    print(f"Error en la base de datos Imagenes con la publicación  con id : {publicacion_id} en el grupo :    : {e}")
                                         except Exception as e:
-                                            #print("Ocurrio un error al obtener descripcions del video", e) 
+                                                    print(f"Algo está pasando con esto Imagenes: {e}")       
+                                    try:
+                                        selector_video= div_global_info_post.find_element(By.CSS_SELECTOR, "video")
+                                        
+                                        if selector_video:
+                                            url_actual=self.obtener_videos(div_global_info_post)
+                                            try:
+                                                    with self.conexion.connection.cursor() as cursor:
+                                                        consulta_verificacion = "SELECT id FROM videos WHERE url = %s "
+                                                        cursor.execute(consulta_verificacion, (url_actual,))
+                                                        resultado = cursor.fetchone()
+                                                        print(f"El id repetido en video es: {resultado}")
+                                                        if (resultado==None):
+                                                            consulta = "INSERT INTO videos (url, publicacion_id) VALUES (%s, %s) "
+                                                            cursor.execute(consulta, (url_actual,publicacion_id))
+                                                            self.conexion.connection.commit() 
+                                                            print(f"Video insertado con éxitos  {url_actual}")
+                                                        else:
+                                                                print("No se inserto video repetido")    
+                                            except psycopg2.Error as e:
+                                                            print(f"Error en la base de datos con la tabla videos: {e}")
+                                            except Exception as e:
+                                                            print(f"Algo está pasando conn el video insertado: {e}")
+                                        else:
+                                            #print("algo salio mal en video")    
                                             pass
-                                        try:
-                                            #self.obtener_retweets(driver,div_global_info_post,publicacion_id)
-                                            pass
-                                        except Exception as e:    
-                                            print(f"Algo paso dentro de llamar a retwees {e}")
                                     except Exception as e:
-                                        print(f"error con div global {e}")
-                                        pass   
+                                        #print("Ocurrio un error al obtener descripcions del video", e) 
+                                        pass
+                                    
+                                    try:
+                                        self.obtener_retweets(driver,div_global_info_post,publicacion_id,type_post)
+                                        
+                                    except Exception as e:    
+                                        print(f"Algo paso dentro de llamar a retwees {e}")
+                                    #yield publicacion_id 
+                                else:
+                                     print(f"El texto ya ha sido procesado. Saltando al siguiente div: {publicacion_id}")
+                                     continue        
                         except Exception as e:
-                            print("Error dentro de extraer datos de for",e) 
+                            #print("Error dentro de extraer datos de for",e) 
                             pass                       
                     except Exception as e:
-                        print("Error dentro del while pero antes del for",e)
+                        #print("Error dentro del while pero antes del for",e)
                         pass
             except Exception as e:
                 print(f"Error dentro de extraer datos de while ene xtraccion genral de datos {e}")   
-                pass
+                pass    
         except Exception as e:
             print(f"Error dentro de extraer datos in funcion {e}")                       
     def procesar_perfiles(self):

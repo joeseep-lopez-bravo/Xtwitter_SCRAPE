@@ -1,15 +1,12 @@
-CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 
 CREATE TABLE public.publicacion (
     id SERIAL PRIMARY KEY,
     usuario VARCHAR(255),
     descripcion TEXT,
-    group_name VARCHAR(255),
     likes VARCHAR(255),
-    id_unico UUID DEFAULT uuid_generate_v4()
+    
 );
-
-
 -- Tabla 'comentario'
 CREATE TABLE public.comentario (
     id SERIAL PRIMARY KEY,
@@ -25,7 +22,6 @@ CREATE TABLE public.imagen (
     publicacion_id INTEGER REFERENCES public.publicacion(id),
     comentario_id INTEGER REFERENCES public.comentario(id),
     contenido VARCHAR,
-    type_img VARCHAR
 );
 
 CREATE TABLE public.videos (

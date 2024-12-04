@@ -49,16 +49,21 @@ pip install logging
 To specify the toopics you want to scrape, enter them in the following files:
 
 - `Topics.conf`
+```conf
+[DEFAULT]
+topic=['#hualyas','#policiahuancayo','#cosplayhuancayo']
 
-
+````
 In each of these files, update the `self."type_page"_links` list with the URLs you wish to scrape:
 
 ```python
 self.perfil_links = [
-            "https://x.com/realDonaldTrump",
-           # 'https://x.com/WH40kbestof',
-           # 'https://x.com/EmergenciasEc',
+            "https://www.instagram.com/1showdequimica/",
+            "https://www.instagram.com/renovacion_popular_juvenil/",
+            "https://www.instagram.com/fuerza_popular_/"
+            
         ]
+
 ````
 ### Adding Profiles
 
